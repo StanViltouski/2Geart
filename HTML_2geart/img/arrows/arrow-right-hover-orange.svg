@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="25px" viewBox="0 0 12 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right-hover-orange</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page" transform="translate(-1809.000000, -3154.000000)" fill="#FEBB16" fill-rule="nonzero">
+            <g id="Logos" transform="translate(99.000000, 2986.000000)">
+                <path d="M1710.24539,169.656179 C1709.883,169.239422 1709.92706,168.607792 1710.34382,168.245394 C1710.76058,167.882997 1711.39221,167.927064 1711.75461,168.343821 L1721.75461,179.843821 C1722.0818,180.220093 1722.0818,180.779907 1721.75461,181.156179 L1711.75461,192.656179 C1711.39221,193.072936 1710.76058,193.117003 1710.34382,192.754606 C1709.92706,192.392208 1709.883,191.760578 1710.24539,191.343821 L1719.6748,180.5 L1710.24539,169.656179 Z" id="arrow-right-hover-orange"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<base href="/">
+
+	<title>2geart - Portfolio</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon.png">
+
+	<meta name="theme-color" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="page">
+	<div class="overlay-bg"></div>
+	<header class="top-line">
+		<div class="container-fluid">
+			<div class="row justify-content-end align-items-center">
+				<a href="/" class="logo"><img src="img/logo-black.svg" class="img-svg" alt="2geart"></a>
+				<div class="menu-wrap">
+					<nav class="main-menu">
+						<ul>
+							<li><a href="portfolio.html" class="active">Portfolio</a><span><i class='lnr lnr-chevron-down'></i><!-- <i class="fa fa-angle-down"></i> --></span>
+								<ul class="sub-menu">
+									<li><a href="/">Design</a></li>
+									<li><a href="/">Web Development</a></li>
+									<li><a href="/">App Development </a></li>
+									<li><a href="/">Internet Marketing</a></li>
+								</ul>
+							</li>
+							<li><a href="services.html">Services</a><span><i class='lnr lnr-chevron-down'></i><!-- <i class="fa fa-angle-down"></i> --></span>
+								<ul class="sub-menu">
+									<li><a href="/">Design</a></li>
+									<li><a href="/">Web Development</a></li>
+									<li><a href="/">App Development </a></li>
+									<li><a href="/">Internet Marketing</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li><a href="contact.html">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="button-wrap btn-mob">
+						<a href="form.html" class="button btn-big">Send a Request</a>	
+					</div>
+				</div>
+				<div class="button-wrap">
+					<a href="form.html" class="button btn-big">Send a Request</a>
+					<a href="#" class="toggle-mnu"><span></span></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="content mr-top">
+		<div class="page-nav">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lx-2 col-lg-2">
+						<div class="filter-id">
+							<select name="portfolio" id="filter">
+								<option value="all">All Projects</option>
+								<option value="design">Design</option>
+								<option value="branding">Branding</option>
+								<option value="development">Development</option>
+							</select>		
+						</div>
+					</div>
+					<div class="col-lg-10">
+						<div class="filter-wrap">
+							<div class="filter_div controls" id="controls0"></div>
+							<div class="filter_div controls" id="controls1">
+								<ul class="filter-list">
+									<li class="filter active" data-filter=".design">All Projects Design</li>
+									<li class="filter" data-filter=".design-1">Web Design</li>
+									<li class="filter" data-filter=".design-2">App Design</li>
+									<li class="filter" data-filter=".design-3">Branding</li>
+									<li class="filter" data-filter=".design-4">Graphic Design</li>
+								</ul>
+							</div>
+							<div class="filter_div controls" id="controls2">
+								<ul class="filter-list">
+									<li class="filter active" data-filter=".branding">All Projects branding</li>
+									<li class="filter" data-filter=".branding-1">branding-1</li>
+									<li class="filter" data-filter=".branding-2">branding-2</li>
+								</ul>
+							</div>	
+							<div class="filter_div controls" id="controls3">
+								<ul class="filter-list">
+									<li class="filter active" data-filter=".development">All Projects development</li>
+									<li class="filter" data-filter=".development-1">development-1</li>
+									<li class="filter" data-filter=".development-2">development-2</li>
+								</ul>
+							</div>	
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section id="portfolio" class="s-projects clearfix">
+			<div class="container-fluid">
+				<div class="row no-gutters" id="portfolio-grid">
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-2 all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/javalanding.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-1 all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/ledger.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item branding-1 branding all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-1 all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/bpm.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-1 development all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/spintrivia.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item branding-2 branding all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/aida.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-2 development all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/debtapp.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-1 development all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/domain.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item branding-2 branding all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/javalanding.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-3 all">
+						<div class="item-project overlay " style="background-image: url(img/projects/ledger.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-3 all">
+						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-4 all ">
+						<div class="item-project overlay " style="background-image: url(img/projects/bpm.png)">
+							<div class="item-project-content mobil-hidden">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						<div class="item-project-content destop-hidden">
+							<h3><a href="#">Ledger App</a></h3>
+							<p>Application</p>							
+						</div>
+					</div>
+				</div>
+
+				<div class="button-wrap">
+					<div class="button btn-show">Show More</div>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+	<div class="s-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li>Portfolio</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-7  col-sm-6 col-12">
+					<div class="footer-adress tabs">
+						<ul class="link-tab">
+							<li class="active">Dallas</li>
+							<li>Linkoln</li>
+							<li>New York</li>
+						</ul>
+						<div class="footer-adress-content">
+							<div class="footer-adress-one">
+								<div class="footer-adress-str">
+									<img src="img/icons/map.svg" alt="alt">
+									<span>3131 McKinney Ave, Suite 600</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/phone.svg" alt="alt">
+									<span>+1 (214) 5563111</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/mail.svg" alt="alt">
+									<span>art@2geart.com</span>
+								</div>
+							</div>
+							<div class="footer-adress-two">
+								<div class="footer-adress-str">
+									<img src="img/icons/map.svg" alt="alt">
+									<span>2020 McKinney Ave, Suite 600</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/phone.svg" alt="alt">
+									<span>+1 (214) 5563222</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/mail.svg" alt="alt">
+									<span>art@2geart.com</span>
+								</div>
+							</div>
+							<div class="footer-adress-three">
+								<div class="footer-adress-str">
+									<img src="img/icons/map.svg" alt="alt">
+									<span>1010 McKinney Ave, Suite 600</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/phone.svg" alt="alt">
+									<span>+1 (214) 5563222</span>
+								</div>
+								<div class="footer-adress-str">
+									<img src="img/icons/mail.svg" alt="alt">
+									<span>art@2geart.com</span>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 mobil-hidden">
+					<div class="footer-menu-items">
+						<div class="footer-menu-item">
+							<h3>Services</h3>
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="/">Design</a></li>
+									<li><a href="/">Web Development </a></li>
+									<li><a href="/">App Development</a></li>
+									<li><a href="/">Internet Marketing</a></li>
+								</ul>
+							</nav>
+						</div>	
+						<div class="footer-menu-item">
+							<h3>Portfolio</h3>
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="/">Web Design</a></li>
+									<li><a href="/">App Design</a></li>
+									<li><a href="/">Branding</a></li>
+									<li><a href="/">Development</a></li>
+								</ul>
+							</nav>
+						</div>							
+						<div class="footer-menu-item">
+							<h3>About</h3>
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="/">Team</a></li>
+									<li><a href="/">Our Awards</a></li>
+									<li><a href="/">Behance</a></li>
+									<li><a href="/">Dribbble</a></li>
+								</ul>
+							</nav>
+						</div>							
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-5 col-sm-6 col-12">
+					<div class="social-wrap">
+						<ul>
+							<li><a href="/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="/"><img src="img/social/insta-icon.svg" alt="alt"></a></li>
+							<li><a href="/"><img src="img/social/behance.svg" alt="alt"></a></li>
+							<li><a href="/"><img src="img/social/dribble-icon.svg" alt="alt"></a></li>
+							<li><a href="/"><img src="img/social/combined-shape.svg" alt="alt"></a></li>
+						</ul>
+					</div>
+					<div class="button-wrap"><a href="/" class="button btn-white"><span>Contact Us</span><i class="lnr lnr-arrow-right"></i></a></div>
+					<div class="copyrating">© 2015-2018 Creative Bureau 2Geart</div>
+				</div>		
+			</div>
+		</div>		
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
