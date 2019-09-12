@@ -6,6 +6,7 @@
 @import url(../libs/formstyler/jquery.formstyler.css);
 @import url(../libs/formstyler/jquery.formstyler.theme.css);
 @import url(../libs/swiper/css/swiper.min.css);
+
 @font-face {
   font-family: "opensans-example";
   font-weight: normal;
@@ -3220,6 +3221,52 @@ html {
   max-height: 100% !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -6296,6 +6343,53 @@ html {
   color: #fff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html {
   max-width: 100%;
   overflow-x: hidden;
@@ -7557,6 +7651,30 @@ ul.link-tab li.active {
   top: 2px;
 }
 
+
+
+
+
+
+
+
+
+
+
+/*=================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 .page {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7585,7 +7703,7 @@ ul.link-tab li.active {
   margin-top: 122px;
   border-top: 1px solid #f5f5f5;
 }
-
+/*
 .breadcrumb li {
   display: inline-block;
   font-size: 14px;
@@ -7611,7 +7729,7 @@ ul.link-tab li.active {
 .breadcrumb li a:hover, .breadcrumb li a:focus {
   color: #fff;
 }
-
+*/
 .list-items {
   max-width: 100%;
   width: 100%;
@@ -9486,6 +9604,8 @@ select {
 .project-dark .overlay-dark::before {
   opacity: .2;
 }
+
+
 
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1680px) {

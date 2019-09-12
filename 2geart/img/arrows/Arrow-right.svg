@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="25px" viewBox="0 0 12 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow-right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page" transform="translate(-357.000000, -658.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Main-Screen">
+                <g id="slider" transform="translate(277.000000, 648.000000)">
+                    <g id="Group-4-Copy-3" transform="translate(80.000000, 10.000000)">
+                        <path d="M9.67480429,12.5 L0.245394478,1.65617871 C-0.11700302,1.23942159 -0.072935837,0.607791975 0.343821285,0.245394478 C0.760578407,-0.11700302 1.39220802,-0.072935837 1.75460552,0.343821285 L11.7546055,11.8438213 C12.0817982,12.2200928 12.0817982,12.7799072 11.7546055,13.1561787 L1.75460552,24.6561787 C1.39220802,25.0729358 0.760578407,25.117003 0.343821285,24.7546055 C-0.072935837,24.392208 -0.11700302,23.7605784 0.245394478,23.3438213 L9.67480429,12.5 Z" id="Arrow-right"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

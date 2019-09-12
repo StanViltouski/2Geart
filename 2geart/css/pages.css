@@ -1,0 +1,117 @@
+.content.mr-top {
+  margin-top: 122px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.filter-list {
+  text-align: center;
+  line-height: 80px;
+  max-height: 80px;
+}
+
+.filter-list li {
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+
+.filter-list li:hover, .filter-list li:focus, .filter-list li.active {
+  color: #febb16;
+}
+
+
+
+
+/*Breadcrumbs*/
+
+.breadcrumb {
+  background-color: #4b4b4b;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  font-size: 14px;
+  padding-right: 27px;
+  position: relative;
+}
+
+.breadcrumb li a {
+  color: #febb16;
+  display: block;
+}
+
+.breadcrumb li a::after {
+  content: '\e876';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-family: "Linearicons-Free";
+  font-size: 10px;
+  color: #a0a0a0;
+}
+
+.breadcrumb li a:hover, .breadcrumb li a:focus {
+  color: #fff;
+}
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+
+  .filter-list li {
+    font-size: 18px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .filter-list li {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 991.98px) { 
+
+  .filter-list {
+    text-align: left;
+    height: 100%;
+    padding: 10px 20px;
+    line-height: 1.6;
+    font-size: 14px;
+    padding-left: 20px;
+    max-height: 100%;
+    right: -2px !important;
+  }
+  .filter-list li {
+    margin-left: 0;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .filter-list li {
+    font-size: 14px;
+  }
+  .content.mr-top {
+    margin-top: 80px;
+  }
+  .filter-list li {
+    padding-bottom: 10px;
+  }
+
+  .breadcrumb li {
+    padding-right: 20px;
+  }
+}
