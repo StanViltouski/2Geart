@@ -5,6 +5,8 @@
 @import url(/css/formstyler/jquery.formstyler.css);
 @import url(/css/formstyler/jquery.formstyler.theme.css);
 @import url(/css/swiper/css/swiper.min.css);
+
+
 @font-face {
   font-family: "opensans-example";
   font-weight: normal;
@@ -35,7 +37,21 @@
   font-style: normal;
   src: url("/fonts/Linearicons-Free/Linearicons-Free.eot");
   src: url("/fonts/Linearicons-Free/Linearicons-Free.eot?#iefix") format("embedded-opentype"), url("/fonts/Linearicons-Free/Linearicons-Free.woff") format("woff"), url("/fonts/Linearicons-Free/Linearicons-Free.ttf") format("truetype"); }
+
+
+
+
 /*Public styles*/
+
+
+*:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 0px;
+}
+
+
 html {
   max-width: 100%;
   overflow-x: hidden; }
@@ -432,7 +448,9 @@ h4, .h4 {
 .overlay-bg.on {
   display: block; }
 
+
 /*Header*/
+
 .top-line {
   position: fixed;
   left: 0;
@@ -1089,28 +1107,23 @@ ul.link-tab li.active {
   position: relative;
   top: 2px; }
 
-/*Breadcrumbs*/
-.breadcrumb li {
-  display: inline-block;
-  font-size: 14px;
-  padding-right: 27px;
-  position: relative; }
+.page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
-.breadcrumb li a {
-  color: #febb16;
-  display: block; }
-
-.breadcrumb li a::after {
-  content: '\e876';
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  font-family: "Linearicons-Free";
-  font-size: 10px;
-  color: #a0a0a0; }
-
-.breadcrumb li a:hover, .breadcrumb li a:focus {
-  color: #fff; }
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
 
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1680px) {
@@ -1157,9 +1170,6 @@ ul.link-tab li.active {
   .s-about h2 {
     margin-top: 15px;
     text-align: center; }
-
-  .page-nav .jq-selectbox__select-text {
-    font-size: 24px; }
 
   .carousel-customers .owl-nav > div.owl-next {
     right: 20px; }
@@ -1387,16 +1397,7 @@ ul.link-tab li.active {
     margin: 0px; }
 
   section h2 {
-    font-size: 44px; }
-
-  .jq-selectbox__dropdown {
-    font-size: 24px; }
-
-  .jq-selectbox__select {
-    font-size: 24px; }
-
-  .jq-selectbox li {
-    font-size: 24px; } }
+    font-size: 44px; } }
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 16px; }
@@ -1495,21 +1496,7 @@ ul.link-tab li.active {
     margin-top: 0; }
 
   .s-customers .owl-nav > div.owl-next {
-    right: 30px; }
-
-  .page-nav .jq-selectbox__select-text {
-    font-size: 20px; }
-
-  .jq-selectbox__dropdown {
-    font-size: 20px; }
-
-  .jq-selectbox__select {
-    font-size: 20px;
-    line-height: 42px; }
-
-  .jq-selectbox li {
-    font-size: 20px;
-    line-height: 42px; } }
+    right: 30px; } }
 @media (max-width: 991.98px) {
   .container {
     max-width: 100%; }
@@ -1870,27 +1857,6 @@ ul.link-tab li.active {
     height: 90px;
     padding: 15px; }
 
-  .swiper-container.swiper-container-vertical {
-    height: 720px; }
-
-  .slider-image-wrap {
-    padding-top: 80px; }
-
-  .swiper-slide-composition h1 {
-    font-size: 40px;
-    text-align: center; }
-
-  .swiper-slide-composition h2, .swiper-slide-composition .h2 {
-    font-size: 36px; }
-
-  .swiper-slide-composition p {
-    padding: 10px 0;
-    font-size: 16px; }
-
-  .swiper-slide-post {
-    font-size: 20px;
-    padding: 8px 0; }
-
   .address {
     height: 100%; }
 
@@ -1930,13 +1896,7 @@ ul.link-tab li.active {
     font-size: 20px; }
 
   .s-order-wrap {
-    max-width: 540px; }
-
-  .page .owl-nav {
-    top: 28%; }
-
-  .page .s-certificates .owl-nav {
-    top: 20%; } }
+    max-width: 540px; } }
 @media (max-width: 575.98px) {
   body {
     font-size: 14px; }
@@ -2078,17 +2038,7 @@ ul.link-tab li.active {
     padding-top: 20px; }
 
   .footer-adress {
-    font-size: 14px; }
-
-  .page-nav .jq-selectbox__select-text {
-    font-size: 18px; }
-
-  .jq-selectbox__select-text {
-    font-size: 18px; }
-
-  .jq-selectbox li {
-    font-size: 14px;
-    padding: 0 0 10px; } }
+    font-size: 14px; } }
 @media only screen and (max-width: 460px) {
   .bg-circle {
     top: -70px;
@@ -2125,5 +2075,58 @@ ul.link-tab li.active {
     left: -280px;
     width: 900px;
     height: 900px; } }
+
+
+    /*404 Page*/
+
+
+    .s-404 {
+  background-image: url(../img/404/bg-404.png);
+  background-position: center 0;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+
+.desc {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.desc .img-responsive {
+  display: inline-block;
+}
+
+.desc h1 {
+  margin-top: 40px;
+}
+
+.desc span {
+  padding: 60px 0;
+  font-size: 32px;
+  display: block;
+}
+
+.desc .button {
+  color: #000;
+}
+
+.desc .button:hover, .desc .button:focus {
+  color: #fff;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
