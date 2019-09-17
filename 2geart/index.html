@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<div class="button-wrap">
-					<a href="form.html" class="button btn-big">Send a Request</a>
+					<a href="form.html" class="button btn-big headerBtn-big-mobile">Request</a>
 					<a href="#" class="toggle-mnu"><span></span></a>
 				</div>
 			</div>
@@ -106,25 +106,25 @@
 			<div class="row justify-content-between">
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count"><span data-count="2015">2015</span></div>
+						<div class="count count_year"><span data-count="2015">2015</span></div>
 						<p>Year of foundation</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count"><span data-count="3">3</span></div>
+						<div class="count count_item"><span data-count="3">3</span></div>
 						<p>State Offices</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count"><span data-count="350">350</span></div>
+						<div class="count count_projects"><span data-count="350">350</span></div>
 						<p>Number of projects</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count"><span data-count="20">20</span>+</div>
+						<div class="count count_market"><span data-count="20">20</span>+</div>
 						<p>Applications on market</p>
 					</div>
 				</div>
@@ -335,7 +335,8 @@
 			<div class="row">
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						Dallas
+						Dallas <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
 					</div>
 					<div class="adressFooter_address">
 						3131 McKinney Ave,
@@ -344,7 +345,7 @@
 				</div>
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						Linkoln
+						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
 					</div>
 					<div class="adressFooter_address">
 						3131 McKinney Ave,
@@ -353,17 +354,7 @@
 				</div>
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						New York
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
-					
-				</div>
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						Dalas
+						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
 					</div>
 					<div class="adressFooter_address">
 						3131 McKinney Ave,
@@ -373,7 +364,7 @@
 				</div>
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						Linkoln
+						Dalas <i class="fa fa-chevron-down" aria-hidden="true"></i>
 					</div>
 					<div class="adressFooter_address">
 						3131 McKinney Ave,
@@ -383,7 +374,17 @@
 				</div>
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						New York
+						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+					
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
 					</div>
 					<div class="adressFooter_address">
 						3131 McKinney Ave,
@@ -503,6 +504,60 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script src="js/scripts.min.js"></script>
+
+
+<script>
+
+	(function() {
+	$('.addressFooter_block').on('click', function(){
+
+		var widthWindow = $(window).innerWidth(),
+			showBlock = $(this).children('.adressFooter_address');
+
+		if(widthWindow <= 767) {
+			(!showBlock.hasClass('active')) ?
+			$(showBlock).slideDown(200).addClass('active') :
+			$(showBlock).slideUp(200).removeClass('active');
+		}
+
+	})
+}());
+
+ var blocking = false; //блокировка от повторного пересчета
+
+function autoCounter() {
+	
+	var countYear = $('.count_year'),
+		countItem = $('.count_item'),
+		countProj = $('.count_projects'),
+		countMarket = $('.count_market');
+
+		var count1 = 1995,
+                 count2 = 3,
+                 count3 = 300,
+                 count4 = 0;
+                 setInterval(function () {
+                     if (count4 < 20) {
+                         $(countYear).html(++count1);
+                       
+                         $(countProj).html(++count3);
+                         $(countMarket).html((++count4)+"+");
+                     }
+}, 30);
+
+                 blocking = true;
+
+
+ };
+
+$(window).on('scroll', function() {
+    
+var scrollValue = $(window).scrollTop();
+	if (scrollValue > 400 && blocking === false) {
+		autoCounter();
+}
+})
+</script>
 
 </body>
 </html>
