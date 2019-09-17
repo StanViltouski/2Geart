@@ -1,5 +1,9 @@
 <?php  global $geart_option; ?>
-<?php $custom_desk_footer_logo = ($geart_option['geart-footer-logo']['url']); ?>
+
+<?php $custom_desk_footer_logo = ($geart_option['geart-footer-logo']['url']); 
+	  $custom_social_nets = ($geart_option['social-nets']);
+	  $custom_download_file = ($geart_option['geart-footer-upload-file']['url']); ?>
+	  
 
 <section class="address_footer">
 		<div class="container">
@@ -91,7 +95,7 @@
 					</div>
 
 					<div class="footerBotton_download">
-						<a href="#">Download PDF</a>
+						<a download href="<?php if($custom_download_file){ echo esc_url($custom_download_file); } else { echo "#"; } ?>">Download PDF</a>
 					</div>
 				</div>
 
@@ -181,18 +185,27 @@
 						<div class="mainFooterBlock_title">Follow Us</div>
 
 						<div class="socialWrap_icons">
-							<a href="/"><i class="fa fa-facebook"></i></a>
-							<a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-							<a href="/"><i class="fa fa-behance" aria-hidden="true"></i></a>
-							<a href="/"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-							<a href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+						<?php 
+                    		if($custom_social_nets){ ?>
+
+                    		<a href="<?php echo esc_url($custom_social_nets['Facebook']); ?>"><i class="fa fa-facebook"></i></a>
+                    		<a href="<?php echo esc_url($custom_social_nets['Instagram']); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    		<a href="<?php echo esc_url($custom_social_nets['Behance']); ?>"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                    		<a href="<?php echo esc_url($custom_social_nets['Dribbble']); ?>"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                    		<a href="<?php echo esc_url($custom_social_nets['Linkedin']); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+                     	<?php 
+                        	} else {
+                            echo "No data";
+                        	} ?>
+
 						</div>
 
 					</div>
-					<div class="button-wrap button-wrap-social"><a href="/" class="button button_mainFooter btn-white btn-arrow"><span>Contact Us</span><i class="lnr lnr-arrow-right"></i></a></div>
+					<div class="button-wrap button-wrap-social"><a href="/contacts" class="button button_mainFooter btn-white btn-arrow"><span>Contact Us</span><i class="lnr lnr-arrow-right"></i></a></div>
 				</div>	
 
-				<div class="copyrating">© 2015-2018 Creative Bureau 2Geart</div>
+				<div class="copyrating">© 2015-<?php echo date('Y'); ?> Creative Bureau 2Geart</div>
 
 			</div>
 		</div>		

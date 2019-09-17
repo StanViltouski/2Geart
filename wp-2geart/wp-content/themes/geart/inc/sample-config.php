@@ -319,6 +319,16 @@
                 'subtitle' => esc_html__( 'Recommended size 130 x 57px', 'geart' ),
                 'default'  => '',
             ),
+            array(
+                'id'       => 'geart-footer-upload-file',
+                'type'     => 'media',
+                'url'      => true,
+                'mode'     => false,
+                'title'    => esc_html__( 'Your file', 'geart' ),
+                'compiler' => 'true',
+                'desc'     => esc_html__( 'Upload file for download', 'geart' ),
+                'default'  => '',
+            ),
 
        )
     ) );
