@@ -345,7 +345,9 @@ h4, .h4 {
   position: absolute;
   right: 40px;
   top: 0px;
-  padding: 22px 15px; }
+  padding: 22px 15px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5); 
+}
 
 .toggle-mnu:hover span,
 .toggle-mnu:hover span:after,
@@ -463,11 +465,10 @@ h4, .h4 {
 
 .fix-line .toggle-mnu {
   display: inline-block;
-  top: 13px; }
+  top: 20px; }
 
 .fix-line .container .button.btn-big,
 .fix-line .container .menu-wrap,
-.fix-line .container-fluid .button.btn-big,
 .fix-line .container-fluid .menu-wrap {
   opacity: 0; }
 
@@ -519,25 +520,25 @@ h4, .h4 {
   display: inline-block;
   margin-right: -4px; }
 
-  .main-menu li a:after {
-    margin-top: 15px;
-    border-radius: 5.5px;
-    background-color: #febb16;
-    display: block;
-    content: "";
-    height: 2px;
-    width: 0%;
-    left: 50%;
-    position: absolute;
+.main-menu li a:after {
+  margin-top: 15px;
+  border-radius: 5.5px;
+  background-color: #febb16;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
     -webkit-transform:translateX(-50%);
     -moz-transform:translateX(-50%);
-    transform:translateX(-50%);
+  transform:translateX(-50%);
   }
 
-.main-menu li a:hover:after, .main-menu li a:focus:after { width: 75px; }
+.main-menu li a:hover:after, .main-menu li a:focus:after { width: 100%; }
 
 .main-menu a {
   margin-right: 60px;
@@ -1804,7 +1805,7 @@ section .button-wrap a {
 
   .socialWrap_icons a {margin-right: 15px;}
 
-  .button {
+  .button_mainFooter {
     padding: 0px 28px;
     height: 34px;
     line-height: 34px; }
@@ -1843,7 +1844,7 @@ section .button-wrap a {
     padding: 0; }
 
   .button-wrap {
-    margin-top: 22px; }
+    margin-top: 26px; }
 
   .toggle-mnu {
     top: 20px;
@@ -2221,7 +2222,6 @@ section .button-wrap a {
     padding-top: 0;
     font-size: 18px; }
 
-
   .page-post .s-header-title {
     font-size: 36px;
     text-transform: uppercase; }
@@ -2242,11 +2242,6 @@ section .button-wrap a {
   }
 
   .container_main_slider {padding-top: 35px;}
-
-  .button {
-    height: 34px;
-    line-height: 34px;
-  }
 
   .btn-white .fa, .btn-white .lnr {right: 50px;}
 
@@ -2312,7 +2307,6 @@ section .button-wrap a {
     cursor: pointer;
   }
 
-
   .addressFooter_block:last-child {margin-bottom:15px;}
 
   .addressFooter_city {
@@ -2327,9 +2321,9 @@ section .button-wrap a {
     color: #9b9b9b;
   }
 
-  .adressFooter_address {
-    display: none;
-  }
+  .adressFooter_address {display: none;}
+
+  .headerBtn-big-mobile {line-height: 34px;}
 
 }
 

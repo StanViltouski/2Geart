@@ -1,0 +1,323 @@
+.page-about .content {border: none;}
+
+.page-about .content .s-header {
+  height: 654px;
+  margin: 132px 0 80px;
+}
+
+.page-about .content .s-header-content {
+  height: 504px;
+  padding-left: 160px;
+}
+
+.about-us {
+  height: 654px;
+  width: 918px;
+  margin: 0 auto;
+}
+
+.page .s-header {padding-top: 0;}
+
+.page .s-header-content {
+  position: relative;
+  padding: 100px 0;
+}
+
+.page .s-header-content p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.s-certificates {padding: 90px 0;}
+
+.s-certificates h2, .s-certificates .h2 {margin-bottom: 60px;}
+
+.carousel-certificates {padding: 20px 0 30px;}
+
+.carousel-certificates-item {
+  padding: 0;
+  text-align: center;
+}
+
+.carousel-certificates-item a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.carousel-certificates-item a .desc {
+  height: 113px;
+  width: 169px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  display: block;
+  padding: 20px;
+  color: #fff;
+  opacity: .7;
+  margin: auto;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+  margin-bottom: 8px;
+}
+
+.carousel-certificates-item a img {
+  opacity: .7;
+  margin-bottom: 8px;
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.carousel-certificates-item a:hover img, .carousel-certificates-item a:focus img 
+  {opacity: 1;}
+
+.carousel-certificates-item a:hover .desc, .carousel-certificates-item a:focus .desc {
+  background-color: #fff;
+  color: #febb16;
+  opacity: 1;
+}
+
+.page .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 28%;
+}
+
+.page .owl-nav > div {
+  position: absolute;
+  left: -30px;
+  font-size: 24px;
+  line-height: 38px;
+  color: #fff;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.page .owl-nav > div:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.page .owl-nav > div.owl-next {
+  right: -30px;
+  left: auto;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  
+  .page-about .content {border: none;}
+
+  .page-about .content .s-header {
+    min-height: auto;
+    height: 620px;
+    margin: 120px 0 60px;
+  }
+
+  .page-about .content .s-header-content {
+    padding-top: 90px;
+    padding-left: 40px;
+  }
+
+  .page-about .content .s-header-content p {
+    font-size: 18px;
+  }
+
+  .about-us {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .s-certificates {
+    padding: 70px 0 80px;
+  }
+
+  .s-certificates h2, .s-certificates .h2 {
+    margin-bottom: 40px;
+  }
+ 
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  .item-project {height: 208px;}
+
+  .page-about .content {border: none;}
+
+  .page-about .content .s-header {
+    height: 364px;
+    overflow: hidden;
+  }
+
+  .page-about .content .s-header-content {
+    padding-left: 40px;
+    height: auto;
+  }
+
+  .page-about .content .s-header-content h1, 
+  .page-about .content .s-header-content .h1 
+    {font-size: 52px;}
+
+  .page-about .content .s-header-content p {font-size: 16px;}
+
+  .about-us {
+    height: 331px;
+    width: 465px;
+    margin: 60px auto 0;
+  }
+
+  .s-certificates {padding: 40px 0;}
+
+  .s-certificates h2, .s-certificates .h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .carousel-certificates-item a .desc {
+    height: 90px;
+    width: 136px;
+    padding: 15px;
+  }
+
+  .page-about .list-composition {padding: 20px 40px;}
+  
+}
+
+
+
+  @media (max-width: 991.98px) { 
+
+  .page .s-header-content {
+    padding: 20px 0;
+  }
+  .page .s-header-content p {
+    text-align: left;
+  }
+  .s-accent {
+    padding: 40px 0;
+  }
+  .carousel-certificates {
+    padding: 0 0 20px;
+  }
+  .s-about .list-image {
+    min-height: 379px;
+    background-position: center top;
+  }
+  .desc {
+    padding: 60px 20px 0;
+  }
+  .desc .img-responsive {
+    max-width: 235px;
+  }
+  .desc h1 {
+    margin-top: 20px;
+  }
+  .desc span {
+    padding: 30px 0;
+    font-size: 18px;
+  }
+  .page-about .content .s-header {
+    height: auto;
+    overflow: visible;
+    margin: 0;
+  }
+  .page-about .content .s-header-content {
+    padding: 40px 80px;
+  }
+  .about-us {
+    height: 355px;
+    width: auto;
+    margin: 102px auto 20px;
+  }
+  .s-certificates .h2, .s-certificates h2 {
+    font-size: 36px;
+  }
+  .carousel-certificates {
+    max-width: 640px;
+    margin: auto;
+  }
+  .carousel-certificates .owl-dots {
+    display: none;
+  }
+  .page-about .list-composition {
+    padding: 20px;
+  }
+  
+
+  }
+
+
+@media (max-width: 768.98px) {
+
+  .page .owl-nav {top: 28%;}
+
+  .page .s-certificates .owl-nav {top: 20%;}
+
+}
+
+
+
+  @media (max-width: 575.98px) {
+    
+  .about-us {
+    height: auto;
+    width: 290px;
+    margin: 89px auto 20px;
+  }
+  .page-about .content .s-header-content {
+    padding: 20px;
+  }
+  .page-about .content .s-header-content .h1, .page-about .content .s-header-content h1 {
+    font-size: 40px;
+  }
+  .s-certificates .h2, .s-certificates h2 {
+    font-size: 32px;
+  }
+  .carousel-certificates .owl-dots {
+    display: block;
+    margin-top: 20px;
+  }
+  .s-certificates.s-accent {
+    padding-bottom: 20px;
+  }
+
+  .s-about .list-image {
+    min-height: 190px;
+  }
+  .s-about .list-composition h3, .s-about .list-composition .h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .page .owl-nav > div.owl-next {
+    right: -25px;
+  }
+  .page .owl-nav > div {
+    left: -25px;
+  }
+  .carousel-certificates-item a .desc {
+    width: 120px;
+    height: 80px;
+    padding: 10px;
+  }
+  .carousel-certificates {
+    padding-bottom: 10px;
+  }
+  .social-wrap ul li {
+    width: 35px;
+    height: 35px;
+  }
+  .social-wrap ul li img {
+    position: relative;
+    top: -2px;
+  }
+
+}

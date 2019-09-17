@@ -69,7 +69,7 @@
 					<div class="row">
 						<div class="container container_main_slider">
 							<div class="row">
-								<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="img/main-page-bitmap.png" alt="alt" class="img-responsive"></div>
+								<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="img/main-page-bitmap.png" alt="alt" class="img-fluid"></div>
 								<div class="col-xl-6 col-lg-6">
 									<div class="slider-item-cont">
 										<h2>Web Design</h2>
@@ -85,7 +85,7 @@
 					<div class="row">
 						<div class="container container_main_slider">
 							<div class="row">
-								<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="img/main-page-bitmap.png" alt="alt" class="img-responsive"></div>
+								<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="img/main-page-bitmap.png" alt="alt" class="img-fluid"></div>
 								<div class="col-xl-6 col-lg-6">
 									<div class="slider-item-cont">
 										<h2>Web Design</h2>
@@ -106,25 +106,25 @@
 			<div class="row justify-content-between">
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count count_year"><span data-count="2015">2015</span></div>
+						<div class="count count_year"><span data-count="2015"></span></div>
 						<p>Year of foundation</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count count_item"><span data-count="3">3</span></div>
+						<div class="count count_item"><span data-count="3"></span></div>
 						<p>State Offices</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count count_projects"><span data-count="350">350</span></div>
+						<div class="count count_projects"><span data-count="350"></span></div>
 						<p>Number of projects</p>
 					</div>
 				</div>
 				<div class="col-auto">
 					<div class="s-adv-item">
-						<div class="count count_market"><span data-count="20">20</span>+</div>
+						<div class="count count_market"><span data-count="20"></span></div>
 						<p>Applications on market</p>
 					</div>
 				</div>
@@ -268,7 +268,7 @@
 	<section class="s-about">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 align-self-center"><img src="img/about_img.png" alt="About Us" class="img-responsive"></div>
+				<div class="col-lg-5 align-self-center"><img src="img/about_img.png" alt="About Us" class="img-fluid"></div>
 				<div class="col-lg-7">
 					<h2>About Us</h2>
 					<p>Over 70% claim that they specify and look through location of the necessary business before for the first time addressing it. It proves, it is how important existence of local representation for your business. And if you have physical representation, you cannot rely only on those who come to you. People constantly use the computers and phones to find the enterprises which offer them what they look for.</p>
@@ -523,7 +523,7 @@
 	})
 }());
 
- var blocking = false; //блокировка от повторного пересчета
+ var blocking = false;
 
 function autoCounter() {
 	
@@ -539,7 +539,7 @@ function autoCounter() {
                  setInterval(function () {
                      if (count4 < 20) {
                          $(countYear).html(++count1);
-                       
+                       	 $(countItem).html(count2)
                          $(countProj).html(++count3);
                          $(countMarket).html((++count4)+"+");
                      }
