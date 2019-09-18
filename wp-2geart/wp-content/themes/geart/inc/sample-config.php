@@ -301,6 +301,70 @@
     ) );
 
 
+     /*Footer address*/
+
+      Redux::setSection( $opt_name, array(
+        'title'            => esc_html__( 'Footer-address', 'geart' ),
+        'id'               => 'footer-address',
+        'fields'           => array(
+        )
+    ) );
+
+    /*Footer address city*/
+      Redux::setSection( $opt_name, array(
+                    'title'            => esc_html__( 'City', 'geart' ),
+                    'id'               => 'footer-address-city',
+                    'subsection'       => true,
+                    'desc'             => esc_html__( 'Enter your city', 'geart' ),
+                    'fields'           => array(   
+                        array(
+                            'id'       => 'geart-city-title',
+                            'type'     => 'sortable',
+                            'title'    => __( 'Title of city', 'geart' ),
+                            'subtitle' => __( 'Enter yours title', 'geart' ),
+                            'label'    => true,
+                            'options'  => array(
+                                'City 1' => 'title',
+                                'City 2' => 'title',
+                                'City 3' => 'title',
+                                'City 4' => 'title',
+                                'City 5' => 'title',
+                                'City 6' => 'title',
+                            )
+                        ),
+                        
+                    )
+             ) );
+
+    /*Footer address city-address*/
+      Redux::setSection( $opt_name, array(
+                    'title'            => esc_html__( 'Address', 'geart' ),
+                    'id'               => 'footer-address-city-address',
+                    'subsection'       => true,
+                    'desc'             => esc_html__( 'Enter your address', 'geart' ),
+                    'fields'           => array(   
+                        array(
+                            'id'       => 'geart-city-address',
+                            'type'     => 'sortable',
+                            'title'    => __( 'Address of city', 'geart' ),
+                            'subtitle' => __( 'Enter address', 'geart' ),
+                            'label'    => true,
+                            'options'  => array(
+                                'Address City 1' => 'address',
+                                'Address City 2' => 'address',
+                                'Address City 3' => 'address',
+                                'Address City 4' => 'address',
+                                'Address City 5' => 'address',
+                                'Address City 6' => 'address',
+                            )
+                        ),
+                        
+                    )
+             ) );
+
+
+
+
     /*Footer*/
 
       Redux::setSection( $opt_name, array(

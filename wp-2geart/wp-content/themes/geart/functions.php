@@ -174,6 +174,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Register Post Type.
+ */
+require get_template_directory() . '/inc/post-type.php';
+
+/**
  * Redux sample-config
  */
 require get_template_directory() . '/inc/sample-config.php';

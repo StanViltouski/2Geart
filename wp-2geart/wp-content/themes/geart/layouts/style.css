@@ -975,16 +975,17 @@ section .button-wrap a {
 .carousel-customers .carousel-customer:hover {
   opacity: 1; }
 
-.carousel-customers .carousel-customer a, .carousel-customers .carousel-customer span {
+.carousel-customers .carousel-customer span {
   display: block;
   text-align: center; }
 
-.carousel-customers .carousel-customer a img, .carousel-customers .carousel-customer span img {
+.carousel-customers .carousel-customer span img {
   max-width: 80%;
   max-height: 70px;
   display: inline-block; }
 
 .carousel-customers .owl-nav {
+  display: block!important;
   position: absolute;
   width: 100%;
   top: 16%; }
@@ -1167,6 +1168,8 @@ section .button-wrap a {
   color: #febb16;
   font-size: 18px;
 }
+
+.social-wrap a:hover {color: #fff;}
 
 .page {
   display: -webkit-box;

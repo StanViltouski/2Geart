@@ -1,8 +1,14 @@
 <?php  global $geart_option; ?>
 
-<?php $custom_desk_footer_logo = ($geart_option['geart-footer-logo']['url']); 
+<?php $custom_desk_footer_logo = ($geart_option['geart-footer-logo']['url']);
+	  $footer_address = array();
+	  array_push($footer_address, $geart_option['geart-city-title'], $geart_option['geart-city-address']);
 	  $custom_social_nets = ($geart_option['social-nets']);
-	  $custom_download_file = ($geart_option['geart-footer-upload-file']['url']); ?>
+	  $custom_download_file = ($geart_option['geart-footer-upload-file']['url']);
+	  $custom_email = ($geart_option['email']);
+      $custom_telephone = ($geart_option['telephone']); 
+      $custom_skype = ($geart_option['skype']); 
+?>
 	  
 
 <section class="address_footer">
@@ -11,65 +17,26 @@
 				Our Departments
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						Dallas <i class="fa fa-chevron-down" aria-hidden="true"></i>
 
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
-				</div>
+			<?php
+
+				for ($i = 1; $i <= count($footer_address[0]); $i++) : ?>
+
 				<div class="col-md-4 col-lg-2 addressFooter_block">
 					<div class="addressFooter_city">
-						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
+						<?php 
+                    		if($footer_address[0]){ echo esc_html($footer_address[0]['City '. $i]); ?><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                     	<?php } else {  echo "No title"; } ?>
 					</div>
 					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
+						<?php 
+                    		if($footer_address[1]){ echo esc_html($footer_address[1]['Address City ' . $i]); ?>
+                     	<?php } else {  echo "No address"; } ?>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
+
+			<?php endfor ?>
 					
-				</div>
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						Dalas <i class="fa fa-chevron-down" aria-hidden="true"></i>
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
-					
-				</div>
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
-					
-				</div>
-				<div class="col-md-4 col-lg-2 addressFooter_block">
-					<div class="addressFooter_city">
-						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
-					</div>
-					<div class="adressFooter_address">
-						3131 McKinney Ave,
-						Suite 600
-					</div>
-					
-				</div>
 			</div>
 		</div>
 	</section>
@@ -83,14 +50,10 @@
 				<div class="col-md-4 col-lg-2 col-12 mainFooter_block mainFooter_block-logo">
 					<div class="footer_logo">
 
-						<?php 
-					
-                		if($custom_desk_footer_logo){ ?>
+						<?php if($custom_desk_footer_logo){ ?>
                     		<a href="/"><img src="<?php echo esc_url($custom_desk_footer_logo); ?>" title="2Geart Design Bureau" alt="logo"></a>
                 		<?php 
-                		} else {
-                    			echo "No image";
-                		} ?> 
+                		} else { echo "No logo"; } ?> 
 						
 					</div>
 
@@ -169,13 +132,16 @@
 					<div class="mainFooterBlock_title">Contacts</div>
 					
 						<div class="contact_block footerContacts_mail">
-							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>art@2geart.com</a>
+							<?php if($custom_email){ ?> <a href="mailto:<?php echo ($custom_email); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo($custom_email); ?></a>
+                    		<?php } else {echo "No email";} ?>
 						</div>
 						<div class="contact_block footerContacts_telephone">
-							<a href=""><i class="fa fa-phone" aria-hidden="true"></i>+1(214)5563111</a>
+							<?php if($custom_telephone){ ?><a href="tel:<?php echo ($custom_telephone); ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo($custom_telephone); ?></a>
+                   			<?php } else {echo "No telephone";} ?>
 						</div>
 						<div class="contact_block footerContacts_skype">
-							<a href=""><i class="fa fa-skype" aria-hidden="true"></i>2Geart</a>
+							<?php if($custom_skype){ ?> <a href="skype:[<?php echo ($custom_skype); ?>]?add"><i class="fa fa-skype" aria-hidden="true"></i><?php echo($custom_skype); ?></a>
+                    		<?php } else {echo "No name";} ?>
 						</div>
 				</div>
 
@@ -244,18 +210,29 @@ function autoCounter() {
 		countProj = $('.count_projects'),
 		countMarket = $('.count_market');
 
-		var count1 = 1995,
-                 count2 = 3,
-                 count3 = 300,
+		var count1 = 1695,
+                 count2 = 0,
+                 count3 = 0,
                  count4 = 0;
+
                  setInterval(function () {
-                     if (count4 < 20) {
-                         $(countYear).html(++count1);
-                       	 $(countItem).html(count2)
-                         $(countProj).html(++count3);
-                         $(countMarket).html((++count4)+"+");
-                     }
-}, 30);
+                     if (count1 < 2015) {$(countYear).html((++count1));}
+				}, 10);
+
+                  setInterval(function () {
+                     if (count2 < 3) {$(countItem).html((++count2));}
+				}, 1333);
+
+                  setInterval(function () {
+                     if (count3 < 320) {$(countProj).html((++count3));}
+				}, 10);
+
+                 setInterval(function () {
+                     if (count4 < 20) {$(countMarket).html((++count4)+"+");}
+				}, 190);
+               
+
+
 
                  blocking = true;
 
