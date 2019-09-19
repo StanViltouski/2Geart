@@ -96,6 +96,8 @@
   border-top: 1px solid #f5f5f5;
 }
 
+
+
 .filter-list li i {display: none;}
 
 .filter-list {
@@ -143,10 +145,14 @@
 /*Breadcrumbs*/
 
 .breadcrumb {
-  background-color: #4b4b4b;
   margin-bottom: 0px;
-  padding: 0;
+  padding: 0 0 10px 0;
+  background-color: #444;
+  border-radius: 0px;
+  border-bottom: solid 1px #656565;
 }
+
+.breadcrumb ul {padding-left: 20px;}
 
 .breadcrumb li {
   display: inline-block;
@@ -314,6 +320,14 @@
 @media only screen and (max-width: 767px) {
 
   .page_title {display: none;}
+
+  #button_filter {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.23;
+    text-align: center;
+    color: #444;
+  }
   
   .filter-list {margin-bottom: 0;}
 
@@ -321,17 +335,30 @@
 
   .filter-list li:nth-child(2) {padding-top: 10px;}
 
-  .filter-list li {
+  #button_filter {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     margin-bottom: 10px;
     width: 100%;
   }
 
-  .filter-list li i {
+  #button_filter span {
     display: block;
+    margin: 0 auto;
+  }
+
+  .filter-list li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.78;
+    text-align: center;
+  }
+
+  .filter-list li i {
+    display: inline-block;
+    font-size: 14px;
     align-self: center;
-    color: #9b9b9b;
+    color: #febb16;
   }
 
   .filter-list li:after {display: none;}
@@ -364,23 +391,12 @@
   }
   .list-text {text-align: left;}
 
-  .list-item:nth-child(2n+2) .list-composition {
-    padding: 20px;
-  }
+  .list-item:nth-child(2n+2) .list-composition {padding: 20px;}
 
-  .filter-list li {
-    font-size: 14px;
-  }
-  .content.mr-top {
-    margin-top: 80px;
-  }
+  .content.mr-top {margin-top: 80px;}
 
-  .breadcrumb li {
-    padding-right: 20px;
-  }
+  .breadcrumb li {padding-right: 20px;}
 
-   .breadcrumb li a::after {
-    font-size: 8px;
-  }
+   .breadcrumb li a::after {font-size: 8px;}
   
 }

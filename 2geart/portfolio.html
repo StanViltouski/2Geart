@@ -31,20 +31,8 @@
 					<nav class="main-menu">
 						<ul>
 							<li><a href="portfolio.html" class="active">Portfolio</a><span><i class='lnr lnr-chevron-down'></i><!-- <i class="fa fa-angle-down"></i> --></span>
-								<ul class="sub-menu">
-									<li><a href="/">Design</a></li>
-									<li><a href="/">Web Development</a></li>
-									<li><a href="/">App Development </a></li>
-									<li><a href="/">Internet Marketing</a></li>
-								</ul>
 							</li>
 							<li><a href="services.html">Services</a><span><i class='lnr lnr-chevron-down'></i><!-- <i class="fa fa-angle-down"></i> --></span>
-								<ul class="sub-menu">
-									<li><a href="/">Design</a></li>
-									<li><a href="/">Web Development</a></li>
-									<li><a href="/">App Development </a></li>
-									<li><a href="/">Internet Marketing</a></li>
-								</ul>
 							</li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="team.html">Team</a></li>
@@ -68,153 +56,342 @@
 		<div class="page-nav">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-lx-2 col-lg-2">
-						<div class="filter-id">
-							<select name="portfolio" id="filter">
-								<option value="all">All Projects</option>
-								<option value="design">Design</option>
-								<option value="branding">Branding</option>
-								<option value="development">Development</option>
-							</select>		
+					<div class="col-12">
+						<div class="page_title">
+							All Projects
 						</div>
-					</div>
-					<div class="col-lg-10">
 						<div class="filter-wrap">
-							<div class="filter_div controls" id="controls0"></div>
-							<div class="filter_div controls" id="controls1">
-								<ul class="filter-list">
-									<li class="filter active" data-filter=".design">All Projects Design</li>
-									<li class="filter" data-filter=".design-1">Web Design</li>
-									<li class="filter" data-filter=".design-2">App Design</li>
-									<li class="filter" data-filter=".design-3">Branding</li>
-									<li class="filter" data-filter=".design-4">Graphic Design</li>
-								</ul>
-							</div>
-							<div class="filter_div controls" id="controls2">
-								<ul class="filter-list">
-									<li class="filter active" data-filter=".branding">All Projects branding</li>
-									<li class="filter" data-filter=".branding-1">branding-1</li>
-									<li class="filter" data-filter=".branding-2">branding-2</li>
-								</ul>
-							</div>	
-							<div class="filter_div controls" id="controls3">
-								<ul class="filter-list">
-									<li class="filter active" data-filter=".development">All Projects development</li>
-									<li class="filter" data-filter=".development-1">development-1</li>
-									<li class="filter" data-filter=".development-2">development-2</li>
-								</ul>
-							</div>	
-						</div>	
-					</div>
+							<ul class="filter-list">
+								<li id="button_filter" class="filter filterAction_mobile active" data-filter=".all"><span>All projects </span><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+								<li class="filter filter_mobile" data-filter=".design">Design</li>
+								<li class="filter filter_mobile" data-filter=".web">Web Development</li>
+								<li class="filter filter_mobile" data-filter=".app">App Development</li>
+								<li class="filter filter_mobile" data-filter=".internet">Internet Marketing</li>
+							</ul>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
 
-		<section id="portfolio" class="s-projects clearfix">
+		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
-				<div class="row no-gutters" id="portfolio-grid">
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-2 all ">
+				<div id="portfolio-grid">
+			
 						<div class="item-project overlay " style="background-image: url(img/projects/javalanding.png)">
-							<div class="item-project-content mobil-hidden">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
 								<h3><a href="#">Ledger App</a></h3>
 								<p>Application</p>
 							</div>
 						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-1 all ">
+					
 						<div class="item-project overlay " style="background-image: url(img/projects/ledger.png)">
-							<div class="item-project-content mobil-hidden">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
 								<h3><a href="#">Ledger App</a></h3>
 								<p>Application</p>
 							</div>
 						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item branding-1 branding all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item design design-1 all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/bpm.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-1 development all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/spintrivia.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item branding-2 branding all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/aida.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-2 development all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/debtapp.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 mix portfolio_item development-1 development all ">
-						<div class="item-project overlay " style="background-image: url(img/projects/domain.png)">
-							<div class="item-project-content mobil-hidden">
-								<h3><a href="#">Ledger App</a></h3>
-								<p>Application</p>
-							</div>
-						</div>
-						<div class="item-project-content destop-hidden">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>							
-						</div>
-					</div>
-				</div>
-
-				<div class="button-wrap">
-					<div class="button btn-show">Show More</div>
-				</div>
 				
+						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay item-project-big" style="background-image: url(img/projects/bpm.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/spintrivia.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/aida.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/debtapp.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/domain.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/javalanding.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+							
+						<div class="item-project overlay " style="background-image: url(img/projects/ledger.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/bpm.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+			
+						<div class="item-project overlay " style="background-image: url(img/projects/spintrivia.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+					
+						<div class="item-project overlay " style="background-image: url(img/projects/aida.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+
+						<div class="item-project overlay " style="background-image: url(img/projects/debtapp.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+		
+						<div class="item-project overlay item-project-big" style="background-image: url(img/projects/domain.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/javalanding.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+					
+						<div class="item-project overlay " style="background-image: url(img/projects/ledger.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/logicway.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/bpm.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+						
+						<div class="item-project overlay " style="background-image: url(img/projects/spintrivia.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+						<div class="item-project overlay " style="background-image: url(img/projects/aida.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+	
+						<div class="item-project overlay " style="background-image: url(img/projects/debtapp.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+				
+
+						<div class="item-project overlay " style="background-image: url(img/projects/domain.png)">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								Ledger App
+							</div>
+							<div class="item-project-content">
+								<h3><a href="#">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
+						</div>
+					
+				</div>
 			</div>
 		</section>
 	</main>
@@ -236,66 +413,95 @@
 	</div>	
 
 
+	<section class="address_footer">
+		<div class="container">
+			<div class="addressFooter_title">
+				Our Departments
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						Dallas <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+					
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						Dalas <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+					
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						Linkoln <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+					
+				</div>
+				<div class="col-md-4 col-lg-2 addressFooter_block">
+					<div class="addressFooter_city">
+						New York <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</div>
+					<div class="adressFooter_address">
+						3131 McKinney Ave,
+						Suite 600
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
 	<footer class="main-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-7  col-sm-6 col-12">
-					<div class="footer-adress tabs">
-						<ul class="link-tab">
-							<li class="active">Dallas</li>
-							<li>Linkoln</li>
-							<li>New York</li>
-						</ul>
-						<div class="footer-adress-content">
-							<div class="footer-adress-one">
-								<div class="footer-adress-str">
-									<img src="img/icons/map.svg" alt="alt">
-									<span>3131 McKinney Ave, Suite 600</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/phone.svg" alt="alt">
-									<span>+1 (214) 5563111</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/mail.svg" alt="alt">
-									<span>art@2geart.com</span>
-								</div>
-							</div>
-							<div class="footer-adress-two">
-								<div class="footer-adress-str">
-									<img src="img/icons/map.svg" alt="alt">
-									<span>2020 McKinney Ave, Suite 600</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/phone.svg" alt="alt">
-									<span>+1 (214) 5563222</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/mail.svg" alt="alt">
-									<span>art@2geart.com</span>
-								</div>
-							</div>
-							<div class="footer-adress-three">
-								<div class="footer-adress-str">
-									<img src="img/icons/map.svg" alt="alt">
-									<span>1010 McKinney Ave, Suite 600</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/phone.svg" alt="alt">
-									<span>+1 (214) 5563222</span>
-								</div>
-								<div class="footer-adress-str">
-									<img src="img/icons/mail.svg" alt="alt">
-									<span>art@2geart.com</span>
-								</div>
-							</div>							
-						</div>
+
+				<div class="col-md-4 col-lg-2 col-12 mainFooter_block mainFooter_block-logo">
+					<div class="footer_logo">
+						<a href="/"><img src="img/footer_logo.svg" alt="logo"></a>
+					</div>
+
+					<div class="footerBotton_download">
+						<a href="#">Download PDF</a>
 					</div>
 				</div>
-				<div class="col-lg-5 mobil-hidden">
+
+				<div class="col-md-4 col-lg-2 col-6 mainFooter_block mobil-hidden">
 					<div class="footer-menu-items">
 						<div class="footer-menu-item">
-							<h3>Services</h3>
+							<div class="mainFooterBlock_title">Services</div>
 							<nav class="footer-menu">
 								<ul>
 									<li><a href="/">Design</a></li>
@@ -305,8 +511,13 @@
 								</ul>
 							</nav>
 						</div>	
+					</div>
+				</div>
+
+				<div class="col-md-4 col-lg-2 col-6 mainFooter_block mobil-hidden">
+					<div class="footer-menu-items">
 						<div class="footer-menu-item">
-							<h3>Portfolio</h3>
+							<div class="mainFooterBlock_title">Portfolio</div>
 							<nav class="footer-menu">
 								<ul>
 									<li><a href="/">Web Design</a></li>
@@ -315,33 +526,58 @@
 									<li><a href="/">Development</a></li>
 								</ul>
 							</nav>
-						</div>							
-						<div class="footer-menu-item">
-							<h3>About</h3>
-							<nav class="footer-menu">
-								<ul>
-									<li><a href="/">Team</a></li>
-									<li><a href="/">Our Awards</a></li>
-									<li><a href="/">Behance</a></li>
-									<li><a href="/">Dribbble</a></li>
-								</ul>
-							</nav>
-						</div>							
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-5 col-sm-6 col-12">
-					<div class="social-wrap">
-						<ul>
-							<li><a href="/"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="/"><img src="img/social/insta-icon.svg" alt="alt"></a></li>
-							<li><a href="/"><img src="img/social/behance.svg" alt="alt"></a></li>
-							<li><a href="/"><img src="img/social/dribble-icon.svg" alt="alt"></a></li>
-							<li><a href="/"><img src="img/social/combined-shape.svg" alt="alt"></a></li>
-						</ul>
+
+				<div class="col-md-4 col-lg-2 col-6 mainFooter_block mobil-hidden">
+					<div class="footer-menu-items">							
+						<div class="footer-menu-item">
+							<div class="mainFooterBlock_title">About</div>
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="/">About U</a></li>
+									<li><a href="/">Team</a></li>
+									<li><a href="/">Contacts</a></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
-					<div class="button-wrap"><a href="/" class="button btn-white"><span>Contact Us</span><i class="lnr lnr-arrow-right"></i></a></div>
-					<div class="copyrating">© 2015-2018 Creative Bureau 2Geart</div>
-				</div>		
+				</div>							
+
+				<div class="col-md-4 col-lg-2 col-6 mainFooter_block">
+					<div class="mainFooterBlock_title">Contacts</div>
+					
+						<div class="contact_block footerContacts_mail">
+							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>art@2geart.com</a>
+						</div>
+						<div class="contact_block footerContacts_telephone">
+							<a href=""><i class="fa fa-phone" aria-hidden="true"></i>+1(214)5563111</a>
+						</div>
+						<div class="contact_block footerContacts_skype">
+							<a href=""><i class="fa fa-skype" aria-hidden="true"></i>2Geart</a>
+						</div>
+				</div>
+
+				<div class="col-md-4 col-lg-2 col-12 mainFooter_block mainFooter_block-social">
+					<div class="social-wrap">
+
+						<div class="mainFooterBlock_title">Follow Us</div>
+
+						<div class="socialWrap_icons">
+							<a href="/"><i class="fa fa-facebook"></i></a>
+							<a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="/"><i class="fa fa-behance" aria-hidden="true"></i></a>
+							<a href="/"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+							<a href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+						</div>
+
+					</div>
+					<div class="button-wrap button-wrap-social"><a href="/" class="button button_mainFooter btn-white btn-arrow"><span>Contact Us</span><i class="lnr lnr-arrow-right"></i></a></div>
+				</div>	
+
+				<div class="copyrating">© 2015-2018 Creative Bureau 2Geart</div>
+
 			</div>
 		</div>		
 	</footer>
@@ -356,5 +592,87 @@
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 
+
+		<script>
+
+	(function() {
+	$('.addressFooter_block').on('click', function(){
+
+		var widthWindow = $(window).innerWidth(),
+			showBlock = $(this).children('.adressFooter_address');
+
+		if(widthWindow <= 767) {
+			(!showBlock.hasClass('active')) ?
+			$(showBlock).slideDown(200).addClass('active') :
+			$(showBlock).slideUp(200).removeClass('active');
+		}
+
+		})
+	}());
+
+
+(function() {
+	$('.filterAction_mobile').on('click', function(){
+
+		var widthWindow = $(window).innerWidth(),
+			showBlock = $('.filter_mobile'),
+			chevron = $('.filterAction_mobile i')
+
+		if(widthWindow <= 767) {
+
+			if (!showBlock.hasClass('act')) {
+
+				$(showBlock).slideDown(200).addClass('act');
+				$(chevron).css({
+					'transform' : 'rotate(-180deg)',
+					'transition' : '0.2s'
+				})
+
+				$(this).css({
+					'padding' : '15px 0 20px 0',
+					'borderBottom' : '1px solid #cbcbcb',
+				})
+
+				$('.filter-list').css({
+					'position' : 'relative',
+					'width' : '95%',
+					'margin' : '5px auto 25px',
+					'borderRadius' : '7px',
+					'boxShadow' : '0 2px 10px 0 rgba(0, 0, 0, 0.2)',
+					'zIndex': '99',
+					'transition' : '0.2s'
+				})
+
+			} else { 
+
+				$(showBlock).slideUp(200).removeClass('act');
+				$(chevron).css({
+					'transform' : 'rotate(0deg)',
+					'transition' : '0.2s'
+				}) 
+
+				$(this).css({
+					'padding' : '0px',
+					'borderBottom' : 'none',
+				})
+
+				$('.filter-list').css({
+					'position' : 'inherit',
+					'width' : '100%',
+					'margin' : '0',
+					'borderRadius' : 'none',
+					'boxShadow' : 'none',
+					'zIndex': 'none',
+					'transition' : '0.2s'
+				})
+			}
+
+			
+		}
+
+		})
+	}());
+
+</script>
 </body>
 </html>

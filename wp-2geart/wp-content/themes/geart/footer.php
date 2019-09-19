@@ -9,6 +9,26 @@
       $custom_telephone = ($geart_option['telephone']); 
       $custom_skype = ($geart_option['skype']); 
 ?>
+
+
+<?php if( !is_front_page() ){?> 
+
+	<div class="s-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li>Portfolio</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+ <?php } ?>
 	  
 
 <section class="address_footer">
@@ -176,10 +196,6 @@
 			</div>
 		</div>		
 	</footer>	
-
-
-
-
 
 
 <?php wp_footer(); ?>

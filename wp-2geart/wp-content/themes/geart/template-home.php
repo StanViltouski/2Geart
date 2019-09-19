@@ -79,9 +79,8 @@ get_header(); ?>
 	<section class="s-projects clearfix">
 		<h2>Recent Projects</h2>
 		<div class="container-fluid">
-			<div class="row no-gutters">
+				<div id="best_portfolio_grid">
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay" style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/javalanding.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -94,9 +93,7 @@ get_header(); ?>
 							<p>mobile app</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/ledger.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -109,9 +106,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/logicway.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -124,9 +119,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/bpm.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -139,9 +132,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/spintrivia.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -154,9 +145,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/aida.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -169,9 +158,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/debtapp.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -184,9 +171,7 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/domain.png)">
 						<div class="item-project_category">
 							<span>mobile app</span>
@@ -199,13 +184,12 @@ get_header(); ?>
 							<p>Application</p>
 						</div>
 					</div>
+					
 				</div>
-
 				<div class="button-wrap button-wrap_main">
-					<a href="/">See All Projects &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+					<a href="/portfolio">See All Projects &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 				</div>
 
-			</div>
 		</div>
 	</section>
 

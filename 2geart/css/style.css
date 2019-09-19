@@ -648,9 +648,11 @@ section .button-wrap a {
   transition: color .25s; }
 
 .s-dark {
-  background-color: #4b4b4b;
+  background-color: #444;
   color: #fff;
-  padding: 10px 0; }
+  padding: 10px 0 0 0;
+  border-bottom: 1px solid #333; 
+}
 
 .s-gray {
   background-color: #f0f4f7; }
@@ -826,7 +828,6 @@ section .button-wrap a {
 .s-projects {padding-top: 0px;}
 
 .item-project {
-  height: 390px;
   cursor: pointer; }
 
 .item-project_category {
@@ -1372,8 +1373,7 @@ section .button-wrap a {
     top: -400px;
     left: -140px; }
 
-  .item-project {
-    height: 320px; } 
+
 
   .addressFooter_block {padding-right: 15px;}
 }
@@ -1398,8 +1398,6 @@ section .button-wrap a {
   .s-features .carousel-colors-item {
     width: 390px; } 
 
-   .item-project {
-    height: 260px; }
 
   .item-project-content {
     padding: 20px; }
@@ -1430,9 +1428,6 @@ section .button-wrap a {
    .s-adv {
     margin-bottom: 100px; }
 
-  .item-project {
-    height: 265px;
-  }
 
   .item-project_title {
     left: 20px;
@@ -1635,8 +1630,6 @@ section .button-wrap a {
   .mainFooterBlock_title{font-size: 18px;}
 
   .footer-menu-items .footer-menu-item a {font-size: 15px;}
-
-  .item-project {height: 210px;}
 
   .address_footer {padding: 30px 0 35px 0;}
 
@@ -2108,9 +2101,6 @@ section .button-wrap a {
   .s-adv .s-adv-item p {
     font-size: 16px;
     padding-top: 13px; }
-
-  .item-project {
-    height: 312px; }
 
   .is-home .s-about h2 {
     text-align: center; }

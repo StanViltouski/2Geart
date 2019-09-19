@@ -14,6 +14,9 @@ if (navfix.length) {
 			if (scroll < navHeight) {
 				navfix.addClass("top-line");
 				navfix.removeClass("fix-line");
+
+				$(".logo .img-svg").attr("src", "http://wp-2geart/wp-content/themes/geart/img/logo.svg");
+			/*
 				if($("body").hasClass("is-home")) {
 					$(".logo .img-svg").attr("src", "http://wp-2geart/wp-content/themes/geart/img/logo.svg");
 				};
@@ -22,7 +25,9 @@ if (navfix.length) {
 				};	
 				if($("body").hasClass("project-dark")) {
 					$(".logo .img-svg").attr("src", "http://wp-2geart/wp-content/themes/geart/img/logo.svg");
-				};			
+				};
+			*/
+
 			};
 			if (scroll > navHeight){
 				navfix.addClass("fix-line");
