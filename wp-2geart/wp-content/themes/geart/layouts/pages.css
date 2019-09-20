@@ -96,8 +96,6 @@
   border-top: 1px solid #f5f5f5;
 }
 
-
-
 .filter-list li i {display: none;}
 
 .filter-list {
@@ -105,18 +103,21 @@
   text-align: center;
 }
 
-.filter-list li {
-  display: inline-block;
-  margin: 0 10px;
+.filter-list li a {
   font-size: 20px;
-  cursor: pointer;
+  color:#000;
   -webkit-transition: color .25s;
   -o-transition: color .25s;
   transition: color .25s;
+}
+
+.filter-list li {
+  display: inline-block;
+  margin: 0 10px;
   position: relative;
 }
 
-.filter-list li:hover, .filter-list li:focus, .filter-list li.active {
+.filter-list li a:hover, .filter-list li a:focus, .filter-list li.active {
   color: #febb16;
 }
 
@@ -215,7 +216,7 @@
   
   .filter-list {margin-bottom: 40px;}
 
-  .filter-list li {font-size: 18px;}
+  .filter-list li a{font-size: 18px;}
 
   .list-composition,
   .list-item:nth-child(2n+2) .list-composition {padding: 12% 10%;}
@@ -321,12 +322,13 @@
 
   .page_title {display: none;}
 
-  #button_filter {
+  #button_filter a {
     font-size: 26px;
     font-weight: bold;
     line-height: 1.23;
     text-align: center;
     color: #444;
+    pointer-events: none;
   }
   
   .filter-list {margin-bottom: 0;}
@@ -342,7 +344,7 @@
     width: 100%;
   }
 
-  #button_filter span {
+  #button_filter a {
     display: block;
     margin: 0 auto;
   }
@@ -397,6 +399,6 @@
 
   .breadcrumb li {padding-right: 20px;}
 
-   .breadcrumb li a::after {font-size: 8px;}
+  .breadcrumb li a::after {font-size: 8px;}
   
 }

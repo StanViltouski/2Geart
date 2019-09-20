@@ -15,7 +15,7 @@ function geart_custompost_type_main_slider() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => '/' ),
+		'rewrite'            => array( 'slug' => 'portfolio' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -44,7 +44,7 @@ function geart_custompost_type_customers() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => '/' ),
+		'rewrite'            => array( 'slug' => 'customers' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -57,6 +57,49 @@ function geart_custompost_type_customers() {
 add_action( 'init', 'geart_custompost_type_customers' );
 
 
+
+//Portfolio
+
+function geart_custompost_type_portfolio() {
+	$labels = array(
+		'name'                  => 'Portfolio',
+		'singular_name'         => 'Portfolio',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'portfolio' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-portfolio',
+	);
+	register_post_type( 'portfolio', $args );
+}
+add_action( 'init', 'geart_custompost_type_portfolio' );
+
+
+
+ function custom_taxonomy_for_clients() {
+	$args = array(
+		'label'        => __( 'Categories Portfolio', 'textdomain' ),
+		'public'       => true,
+		'rewrite'      => true,
+		'hierarchical' => true
+	);
+	
+	register_taxonomy( 'categories-portfolio', 'portfolio', $args );
+
+}
+
+add_action( 'init', 'custom_taxonomy_for_clients', 0 );
 
 
 

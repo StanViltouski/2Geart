@@ -1,9 +1,14 @@
 (function() {
 
+$('.menu-portfolio-category-container li:eq(0)').addClass('filterAction_mobile').attr('id', 'button_filter');
+$('.menu-portfolio-category-container li a:eq(0)').after('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
+$('.menu-portfolio-category-container li').addClass('filter');
+$(".menu-portfolio-category-container li:not(:first)").addClass('filter_mobile');
+
 	$('.filterAction_mobile').on('click', function(){
 
 		var widthWindow = $(window).innerWidth(),
-			showBlock = $('.filter_mobile'),
+			showBlock = $('.filter-list .filter_mobile'),
 			chevron = $('.filterAction_mobile i');
 
 		if(widthWindow <= 767) {
