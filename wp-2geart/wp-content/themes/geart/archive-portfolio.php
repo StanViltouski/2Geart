@@ -4,38 +4,36 @@ get_header(); ?>
 
 	<main class="content mr-top">
 		<div class="page-nav">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-12">
-						<div class="page_title">
-							All Projects
-						</div>
-						<div class="filter-wrap">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-12">
+					<div class="page_title">
+						All Projects
+					</div>
+					<div class="filter-wrap">
 
-						<?php wp_nav_menu([
-                    		'theme_location'  => '',
-                    		'menu'            => 'Portfolio-category', 
-                    		'container'       => 'div', 
-                    		'menu_class'      => false, 
-                    		'echo'            => true,
-                    		'fallback_cb'     => 'wp_page_menu',
-                    		'items_wrap'      => '<ul class="filter-list">%3$s</ul>',
-                    		'depth'           => 0,
-                			]);
-                		?>
-<!--
-							<ul class="filter-list">
-								<li id="button_filter" class="filter filterAction_mobile active" data-filter=".all"><span>All projects </span><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
-								<li class="filter filter_mobile" data-filter=".design">Design</li>
-								<li class="filter filter_mobile" data-filter=".web">Web Development</li>
-								<li class="filter filter_mobile" data-filter=".app">App Development</li>
-								<li class="filter filter_mobile" data-filter=".internet">Internet Marketing</li>
-							</ul>
--->
-						</div>
-					</div>	
-				</div>
+						<ul class="filter-list">
+							<li id="title_filter" class="filter filterAction_mobile"><a href="/portfolios">All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+
+							<?php $wcatTerms = get_terms('categories-portfolio', 
+                            	array(
+                                	'hide_empty' => 0,
+                                	'parent'     => 0,
+                                	'orderby'    => 'count',
+                                	'order'      => 'DESK',
+                            	)); 
+
+                        	foreach($wcatTerms as $wcatTerm) : ?>
+
+                        		<li class="filter filter_mobile"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
+
+                        	<?php endforeach; ?>
+
+						</ul>
+					</div>
+				</div>	
 			</div>
+		</div>
 		</div>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">

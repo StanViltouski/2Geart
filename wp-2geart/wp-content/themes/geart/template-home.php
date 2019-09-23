@@ -81,110 +81,43 @@ get_header(); ?>
 		<div class="container-fluid">
 				<div id="best_portfolio_grid">
 
-					<div class="item-project overlay" style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/javalanding.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>mobile app</p>
-						</div>
-					</div>
+				<?php 
+					wp_reset_query();
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/ledger.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
+  					$best_portfolio = array(
+    					'post_type' => 'portfolio',
+    					'posts_per_page' => -1,
+    					'meta_query' => array( 
+      						array(
+        						'key' => 'show_on_main_page',
+        						'value' => '1'
+      						)
+   						 )
+  					);
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/logicway.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
+ 					 $best_portfolio_query = new WP_Query( $best_portfolio );
+  					while ( $best_portfolio_query->have_posts() ) :
+    					$best_portfolio_query->the_post(); 
+				?>
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/bpm.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
+					<div class="item-project overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
+							<div class="item-project_category">
+								<span>mobile app</span>
+							</div>
+							<div class="item-project_title">
+								<?php esc_html(the_title()); ?>
+							</div>
+							<div class="item-project-content">
+								<h3><a href="<?php esc_url(the_permalink()); ?>">Ledger App</a></h3>
+								<p>Application</p>
+							</div>
 						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/spintrivia.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/aida.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
+				<?php 
+    				endwhile; wp_reset_query();
+    			?>
 
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/debtapp.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
-
-					<div class="item-project overlay " style="background-image: url(<?php bloginfo('template_directory') ?>/img/projects/domain.png)">
-						<div class="item-project_category">
-							<span>mobile app</span>
-						</div>
-						<div class="item-project_title">
-							Ledger App
-						</div>
-						<div class="item-project-content">
-							<h3><a href="#">Ledger App</a></h3>
-							<p>Application</p>
-						</div>
-					</div>
-					
 				</div>
 				<div class="button-wrap button-wrap_main">
 					<a href="/portfolio">See All Projects &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>

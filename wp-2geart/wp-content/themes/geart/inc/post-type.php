@@ -73,9 +73,10 @@ function geart_custompost_type_portfolio() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolio' ),
+		'rewrite'            => array( 'slug' => 'portfolios' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
+		'show_in_rest'       => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'thumbnail'),
@@ -87,7 +88,7 @@ add_action( 'init', 'geart_custompost_type_portfolio' );
 
 
 
- function custom_taxonomy_for_clients() {
+ function custom_taxonomy_for_portfolio() {
 	$args = array(
 		'label'        => __( 'Categories Portfolio', 'textdomain' ),
 		'public'       => true,
@@ -99,7 +100,7 @@ add_action( 'init', 'geart_custompost_type_portfolio' );
 
 }
 
-add_action( 'init', 'custom_taxonomy_for_clients', 0 );
+add_action( 'init', 'custom_taxonomy_for_portfolio', 0 );
 
 
 

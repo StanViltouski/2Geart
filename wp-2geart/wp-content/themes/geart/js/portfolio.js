@@ -1,10 +1,5 @@
 (function() {
 
-$('.menu-portfolio-category-container li:eq(0)').addClass('filterAction_mobile').attr('id', 'button_filter');
-$('.menu-portfolio-category-container li a:eq(0)').after('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
-$('.menu-portfolio-category-container li').addClass('filter');
-$(".menu-portfolio-category-container li:not(:first)").addClass('filter_mobile');
-
 	$('.filterAction_mobile').on('click', function(){
 
 		var widthWindow = $(window).innerWidth(),
@@ -22,19 +17,21 @@ $(".menu-portfolio-category-container li:not(:first)").addClass('filter_mobile')
 				})
 
 				$(this).css({
-					'padding' : '15px 0 20px 0',
 					'borderBottom' : '1px solid #cbcbcb',
+					'marginBottom' : '20px',
 				})
 
 				$('.filter-list').css({
 					'position' : 'relative',
 					'width' : '95%',
+					'padding': '0 10px 20px 10px',
 					'margin' : '5px auto 25px',
 					'borderRadius' : '7px',
 					'boxShadow' : '0 2px 10px 0 rgba(0, 0, 0, 0.2)',
 					'zIndex': '99',
 					'transition' : '0.2s',
 				})
+
 
 			} else { 
 
@@ -45,13 +42,14 @@ $(".menu-portfolio-category-container li:not(:first)").addClass('filter_mobile')
 				}) 
 
 				$(this).css({
-					'padding' : '0px',
 					'borderBottom' : 'none',
+					'marginBottom' : '0px',
 				})
 
 				$('.filter-list').css({
 					'position' : 'inherit',
-					'width' : '100%',
+					'width' : '',
+					'padding': '0 25px',
 					'margin' : '0',
 					'borderRadius' : 'none',
 					'boxShadow' : 'none',
