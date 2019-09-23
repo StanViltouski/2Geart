@@ -1,13 +1,14 @@
 <?php 
 
 /**
-* Template name: Design (Portf) Template
+* Template name: Design_App Template
 */
+
 get_header(); ?>
 
-<main class="content mr-top">
-
-	<?php get_template_part( 'template-parts/portfolio-category-menu-inner', 'filter-menu' ); ?>
+	<main class="content mr-top">
+		
+		<?php get_template_part( 'template-parts/portfolio-category-menu-inner', 'filter-menu-inner' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -19,7 +20,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'design' )
+            		            	'terms'   => array( 'app' )
             		        	)
             		    )
             		);
@@ -48,6 +49,5 @@ get_header(); ?>
 		</section>
 	</main>
 
-<?php get_template_part( 'template-parts/modal-filter-inner', 'modal-filter-inner' ); ?>
-		
+
 <?php get_footer(); ?>

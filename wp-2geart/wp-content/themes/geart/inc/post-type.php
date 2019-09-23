@@ -104,14 +104,4 @@ add_action( 'init', 'custom_taxonomy_for_portfolio', 0 );
 
 
 
-
-
-
-
-
-
-
-
-
-
  ?>

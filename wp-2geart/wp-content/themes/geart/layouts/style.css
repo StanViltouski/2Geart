@@ -551,8 +551,13 @@ h4, .h4 {
   transition: color .25s ease;
   position: relative; }
 
-.main-menu a:hover, .main-menu a:focus, .main-menu a.active {
+.main-menu a:hover, .main-menu a:focus, .main-menu a.active{
   color: #febb16; }
+
+
+.current-menu-item a {
+  color:#febb16!important;
+}
 
 .main-menu span {
   display: none;
@@ -2166,12 +2171,14 @@ section .button-wrap a {
     padding: 15px; }
 
   .top-line .btn-mob .button {
-    display: block; }
+    display: block;
+    margin: 0 auto;
+    max-width: 250px; 
+  }
 
   .top-line .button-wrap {
     margin-right: 90px;
-
-}
+  }
 
   .logo {
     top: 15px; }
@@ -2198,9 +2205,7 @@ section .button-wrap a {
   .fix-line .btn-mob .button {
     display: block; }
 
-  .main-menu {
-    text-align: left;
-    margin-top: 0px; }
+  .main-menu { margin-top: 0px; }
 
   .main-menu a {
     font-size: 18px;

@@ -13,7 +13,7 @@ get_header(); ?>
 					<div class="filter-wrap">
 
 						<ul class="filter-list">
-							<li id="title_filter" class="filter filterAction_mobile"><a href="/portfolios">All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+							<li id="title_filter" class="filter filterAction_mobile" data-toggle="modal" data-target="#example"><a href="/portfolios" >All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
 
 							<?php $wcatTerms = get_terms('categories-portfolio', 
                             	array(
@@ -65,6 +65,6 @@ get_header(); ?>
 			</div>
 		</section>
 	</main>
-
+<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
 
 <?php get_footer(); ?>

@@ -49,6 +49,6 @@ get_header(); ?>
 		</section>
 	</main>
 
-
+<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
 
 <?php get_footer(); ?>
