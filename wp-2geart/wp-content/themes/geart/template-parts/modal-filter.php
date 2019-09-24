@@ -1,25 +1,33 @@
 
-<div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <ul class="filter-list filter-list-modal">
-          <li id="title_filter" class="filter filter-modal filterAction_mobile" data-toggle="modal" data-target="#example"><a href="/portfolios" >All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+<div class="modal fade" id="modal-filter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+    	   <div class="modal-header modal-header-inner">
+        	   <span class="modal-header-title-inner">All Projects</span> <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      	    </div>
+      	    <div class="modal-body">
 
-            <?php $wcatTerms = get_terms('categories-portfolio', 
-                array(
-                    'hide_empty' => 0,
-                    'parent'     => 0,
-                    'orderby'    => 'count',
-                    'order'      => 'DESK',
-                )); 
+      		    <ul class="modal-filter-list-inner">
+                    <li class="filter"><a href="/portfolios">All projects</a></li>
+				        <?php 
 
-                foreach($wcatTerms as $wcatTerm) : ?>
+					       $term_name = (get_queried_object()->post_name);
+					       $myTaxonomy = 'categories-portfolio';
+					       $termID = get_term_by( 'slug', $term_name, $myTaxonomy)->term_id;
+					       $termchildren = get_term_children( $termID, $myTaxonomy);
+		
+					       foreach ($termchildren as $child) :
+                                $term = get_term_by( 'id', $child, $myTaxonomy );
+                                echo '<li class="filter"><a href="'. '/' . $term->slug . '">' . $term->name . '</a></li>';                    
+                            endforeach;  
+                        ?>
+			    </ul>
 
-                  <li class="filter"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
-
-                <?php endforeach; ?>
-
-      </ul>    
+      	    </div>			
+        </div>
     </div>
-  </div>
 </div>
+
+
+
+

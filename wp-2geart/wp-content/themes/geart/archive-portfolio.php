@@ -3,17 +3,19 @@
 get_header(); ?>
 
 	<main class="content mr-top">
+
 		<div class="page-nav">
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-12">
-					<div class="page_title">
+					<div class="page_title">	
 						All Projects
 					</div>
+
 					<div class="filter-wrap">
 
 						<ul class="filter-list">
-							<li id="title_filter" class="filter filterAction_mobile" data-toggle="modal" data-target="#example"><a href="/portfolios" >All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+							<li id="title_filter" class="filter filterAction_mobile" data-toggle="modal" data-target="#modal-filter-portf"><a href="/portfolios" >All projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
 
 							<?php $wcatTerms = get_terms('categories-portfolio', 
                             	array(
@@ -28,13 +30,13 @@ get_header(); ?>
                         		<li class="filter filter_mobile"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
 
                         	<?php endforeach; ?>
-
 						</ul>
+						
 					</div>
 				</div>	
 			</div>
 		</div>
-		</div>
+	</div>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -65,6 +67,35 @@ get_header(); ?>
 			</div>
 		</section>
 	</main>
-<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-filter-portf" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-portf">
+                <span class="modal-header-title">All Projects</span><i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-filter-list">
+                    <?php $wcatTerms = get_terms('categories-portfolio', 
+                        array(
+                            'hide_empty' => 0,
+                            'parent'     => 0,
+                            'orderby'    => 'count',
+                            'order'      => 'DESK',
+                        )); 
+
+                    foreach($wcatTerms as $wcatTerm) : ?>
+
+                      <li class="filter"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
+
+                    <?php endforeach; ?>
+
+                </ul>  
+            </div>  
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

@@ -340,6 +340,8 @@
     font-size: 26px;
   }
 
+  .filter-list li {margin-right: 0;}
+
   .filter-list li:after {display: none;}
 
   .filter-list .filter_mobile {display: none;}
@@ -374,10 +376,31 @@
   }
 
 
+/*Page Portfolio*/
+
+  #title_filter{
+    display: flex;
+    justify-content: end;
+    padding: 20px 0 0 14px;
+  }
+
+  #title_filter a {
+    margin: 0 auto;
+    font-size: 26px;
+    font-weight: 600;
+    pointer-events: none;
+    color: #444;
+  }
+
+  #title_filter i {
+    align-self: center;
+    color: #9b9b9b;
+  }
+
 
   /*Modal Public*/
 
-  .modal-dialog {margin: 175px auto;}
+  .modal-dialog {margin: 130px auto;}
 
   .modal-backdrop.show {opacity: 0;}
 
@@ -390,31 +413,32 @@
   }
 
   .modal-body {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
   }
 
-  .modal-header {
-    justify-content: center;
-    padding: 25px 0 20px 0;
+  .modal-header {padding: 25px 0 20px 0;}
+
+  
+
+/*Modal Inner*/
+
+  .modal-header-inner {justify-content: center;}
+
+  .modal-header .modal-header-title-inner {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.23;
     text-align: center;
     color: #444;
-    pointer-events: none;
   }
 
-  .modal-header i {
+  .modal-header-inner i {
     padding-left: 10px;
     font-size: 14px;
     align-self: center;
     color: #9b9b9b;
   }
-
-
-
-/*Modal Inner*/
 
   .modal-filter-list-inner li {
     display: block;
@@ -443,64 +467,49 @@
   }
   
 
+/*Modal Page Portfolio*/
 
-
-/*
-  #title_filter {
-    display: flex;
+  .modal-header-portf {
     justify-content: end;
-    padding: 20px 0;
+    margin: 0 auto;
+    width: 90%;
   }
 
-  .filter-modal {border-bottom: 1px solid #cbcbcb;}
-
-  #title_filter a {
+  .modal-header-portf .modal-header-title{
     margin: 0 auto;
+    padding-left: 14px;
     font-size: 26px;
     font-weight: bold;
-    line-height: 1.78;
+    line-height: 1.23;
+    text-align: center;
     color: #444;
-    pointer-events: none;
   }
 
-  #title_filter i {
+  .modal-header-portf i {
     align-self: center;
+    color: #9b9b9b;
+  }
+
+  .modal-filter-list li {
+    display: block;
+    margin-right: 0px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .modal-filter-list li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .modal-filter-list li a:hover {
     color: #febb16;
-   
+    -webkit-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
   }
 
-  
-
-  #button_filter a {
-    margin-right: 5px;
-    color: #febb16;
-    pointer-events: none;
-  }
-
-  .modal-header {
-    justify-content: center;
-  }
-  
-  
-
-  #button_filter {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-
-
-
-  
-
-  .filter-list li a {margin-bottom: 10px;}
-
-  
-   
-
- 
-
-  
-*/
 }
 
 

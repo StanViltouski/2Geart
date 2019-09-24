@@ -11,26 +11,22 @@
 
 					
 					<div class="filter-wrap">
-
-						<ul class="filter-list">
-							<li id="title_filter-inner" class="filter" data-toggle="" data-target="#exampleModal"><a href="/portfolios">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
-						
-							<?php 
-
-							$term_name = (get_queried_object()->post_name);
-							$myTaxonomy = 'categories-portfolio';
-							$termID = get_term_by( 'slug', $term_name, $myTaxonomy)->term_id;
-							$termchildren = get_term_children($termID, $myTaxonomy);
-		
-							foreach ($termchildren as $child) :
-                    			$term = get_term_by( 'id', $child, $myTaxonomy );
-
-                    			echo '<li class="filter filter_mobile"><a href="'. '/' . $term->slug . '">' . $term->name . '</a></li>';
-                    
-                			endforeach;  ?>
-                		
-						</ul>
-						
+                        <ul class="filter-list">
+                            <li id="button_filter" class="filter" data-toggle="" data-target="#exampleModal"><a href="/portfolios">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+                        
+                            <?php 
+                            	$term_name = (get_queried_object()->post_name);
+                            	$myTaxonomy = 'categories-portfolio';
+                            	$termID = get_term_by( 'slug', $term_name, $myTaxonomy)->term_id;
+                            	$termParentID = get_term($termID)->parent;
+                            	$termchildren = get_term_children($termParentID, $myTaxonomy);
+        
+                            foreach ($termchildren as $child) :
+                                $term = get_term_by( 'id', $child, $myTaxonomy );
+                                echo '<li class="filter filter_mobile"><a href="'. '/' . $term->slug . '">' . $term->name . '</a></li>';                
+                            endforeach;  ?>                  
+                        </ul>
+                        
 					</div>
 
 				</div>	

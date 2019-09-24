@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="content mr-top">
 
-	<?php get_template_part( 'template-parts/portfolio-category-menu-inner', 'filter-menu' ); ?>
+	<?php get_template_part( 'template-parts/portfolio-category-menu', 'filter-menu' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -26,8 +26,7 @@ get_header(); ?>
 
                 $posts = get_posts($args);
 
-                foreach($posts as $post) : ?>
-								
+                foreach($posts as $post) : ?>								
 						<div class="item-project overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
 							<div class="item-project_category">
 								<span>mobile app</span>
@@ -40,14 +39,13 @@ get_header(); ?>
 								<p>Application</p>
 							</div>
 						</div>
-
-			<?php endforeach; wp_reset_query(); ?>
+				<?php endforeach; wp_reset_query(); ?>
 					
 				</div>
 			</div>
 		</section>
-	</main>
+</main>
 
-<?php get_template_part( 'template-parts/modal-filter-inner', 'modal-filter-inner' ); ?>
+<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
 		
 <?php get_footer(); ?>

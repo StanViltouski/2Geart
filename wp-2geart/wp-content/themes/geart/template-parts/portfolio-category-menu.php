@@ -1,4 +1,4 @@
-<div class="page-nav">
+	<div class="page-nav">
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-12">
@@ -13,15 +13,14 @@
 					<div class="filter-wrap">
 
 						<ul class="filter-list">
-							<li id="button_filter" class="filter" data-toggle="" data-target="#exampleModal"><a href="/portfolios">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+							<li id="title_filter-inner" class="filter" data-toggle="" data-target="#modal-filter"><a href="/portfolios">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
 						
 							<?php 
 
 							$term_name = (get_queried_object()->post_name);
 							$myTaxonomy = 'categories-portfolio';
 							$termID = get_term_by( 'slug', $term_name, $myTaxonomy)->term_id;
-							$termParentID = get_term($termID)->parent;
-							$termchildren = get_term_children($termParentID, $myTaxonomy);
+							$termchildren = get_term_children($termID, $myTaxonomy);
 		
 							foreach ($termchildren as $child) :
                     			$term = get_term_by( 'id', $child, $myTaxonomy );
