@@ -260,8 +260,9 @@ $(".s-services li").click(function() {
 var swiper = new Swiper('.swiper-container', {
 	direction: 'vertical',
 	slidesPerView: 1,
-	mousewheel: true,	
-	// effect: 'fade',
+	autoplay: true,
+	mousewheel: false,	
+	effect: 'fade',
 	navigation: {
 		nextEl: '.swiper-next',
 		prevEl: '.swiper-prev',

@@ -118,7 +118,6 @@
 }
 
 .swiper-slide-composition {
-  height: 100%;
   padding: 0 140px 60px;
 }
 
@@ -156,10 +155,17 @@
 
 .swiper-slide-social ul li:hover, .swiper-slide-social ul li:focus {
   opacity: 1;
+  transform: scale(1.05);
 }
 
 .swiper-slide-social ul li a {
   display: block;
+  height: 100%;
+  color: #febb16;
+}
+
+.swiper-slide-social li a i {
+ vertical-align: middle;
 }
 
 .swiper-slide-item:nth-child(1) .swiper-slide-composition {
@@ -226,6 +232,7 @@
 
 .swiper-slide-composition h1 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 

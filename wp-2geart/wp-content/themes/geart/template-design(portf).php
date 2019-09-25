@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="content mr-top">
 
-	<?php get_template_part( 'template-parts/portfolio-category-menu', 'filter-menu' ); ?>
+	<?php get_template_part( 'template-parts/portfolio-category-menu-inner_one', 'filter-menu-inner_one' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -46,6 +46,6 @@ get_header(); ?>
 		</section>
 </main>
 
-<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
+<?php get_template_part( 'template-parts/modal-filter-inner-one', 'modal-filter-inner-one' ); ?>
 		
 <?php get_footer(); ?>

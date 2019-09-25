@@ -104,4 +104,114 @@ add_action( 'init', 'custom_taxonomy_for_portfolio', 0 );
 
 
 
+
+//Services
+
+function geart_custompost_type_service() {
+	$labels = array(
+		'name'                  => 'Service',
+		'singular_name'         => 'Service',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'service' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-hammer',
+	);
+	register_post_type( 'service', $args );
+}
+add_action( 'init', 'geart_custompost_type_service' );
+
+
+//Certificates
+
+function geart_custompost_type_certificates() {
+	$labels = array(
+		'name'                  => 'Certificates',
+		'singular_name'         => 'Certificate',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'certificates' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-welcome-learn-more',
+	);
+	register_post_type( 'certificates', $args );
+}
+add_action( 'init', 'geart_custompost_type_certificates' );
+
+
+//Team
+
+function geart_custompost_type_team() {
+	$labels = array(
+		'name'                  => 'Team',
+		'singular_name'         => 'Team',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'team' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-id',
+	);
+	register_post_type( 'team', $args );
+}
+add_action( 'init', 'geart_custompost_type_team' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  ?>

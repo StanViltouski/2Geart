@@ -1,3 +1,5 @@
+.s-header-content h1 {font-weight: bold;}
+
 .page-about .content {border: none;}
 
 .page-about .content .s-header {
@@ -34,6 +36,32 @@
 
 .carousel-certificates {padding: 20px 0 30px;}
 
+.carousel-certificates-item-block {
+  margin: 0 auto;
+  max-width: 170px;
+  height: 113px;
+  cursor: pointer;
+  background: transparent url(../img/diploma-icon.svg);
+}
+
+.carousel-certificates-item-block:hover {background: transparent url(../img/diploma-icon-hover.svg);}
+
+.carousel-certificates-item span {display: block;}
+
+.type-certificate {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.56;
+  color: #ffffff;
+}
+
+.location-certificate {
+  font-size: 12px;
+  line-height: 2.33;
+  color: #ffffff;
+}
+
 .carousel-certificates-item {
   padding: 0;
   text-align: center;
@@ -63,20 +91,14 @@
 }
 
 .carousel-certificates-item a img {
-  opacity: .7;
+  max-width: 170px;
   margin-bottom: 8px;
-  -webkit-transition: opacity .25s;
-  -o-transition: opacity .25s;
-  transition: opacity .25s;
 }
 
-.carousel-certificates-item a:hover img, .carousel-certificates-item a:focus img 
-  {opacity: 1;}
 
 .carousel-certificates-item a:hover .desc, .carousel-certificates-item a:focus .desc {
   background-color: #fff;
   color: #febb16;
-  opacity: 1;
 }
 
 .page .owl-nav {
@@ -107,6 +129,33 @@
   right: -30px;
   left: auto;
 }
+
+
+/*Modal Sertificate*/
+
+#modal-certificate{padding-right: 0px;}
+
+.modal-content-certificate {
+   margin-top: 140px;
+   padding: 35px;
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+.modal-content-certificate .button_close i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: #979797;
+  font-size: 20px;
+}
+
+body.modal-open {
+  padding-right: 0px !important;
+  overflow-y: auto;
+}
+
 
 
 @media only screen and (max-width: 1280px) {
@@ -292,8 +341,9 @@
     min-height: 190px;
   }
   .s-about .list-composition h3, .s-about .list-composition .h3 {
-    font-size: 32px;
     margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: bold;
     line-height: 1.2;
     text-align: left;
   }

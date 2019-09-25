@@ -127,10 +127,14 @@ function geart_scripts() {
 	//styles
 	wp_enqueue_style( 'geart-style', get_stylesheet_uri() );
 	wp_enqueue_style('bootstrap.min', get_template_directory_uri() . '/layouts/libs/bootstrap.min.css');
-	wp_enqueue_style('reset', get_template_directory_uri() . '/layouts/reset.css', array());
-	wp_enqueue_style('main-styles', get_template_directory_uri() . '/layouts/style.css', array());
-	wp_enqueue_style('pages', get_template_directory_uri() . '/layouts/pages.css', array());
-	wp_enqueue_style('portfolio', get_template_directory_uri() . '/layouts/portfolio.css', array());
+	wp_enqueue_style('geart-reset', get_template_directory_uri() . '/layouts/reset.css', array());
+	wp_enqueue_style('geart-main-styles', get_template_directory_uri() . '/layouts/style.css', array());
+	wp_enqueue_style('geart-pages', get_template_directory_uri() . '/layouts/pages.css', array());
+	wp_enqueue_style('geart-portfolio', get_template_directory_uri() . '/layouts/portfolio.css', array());
+	wp_enqueue_style('geart-services', get_template_directory_uri() . '/layouts/services.css', array());
+	wp_enqueue_style('geart-about', get_template_directory_uri() . '/layouts/about.css', array());
+	wp_enqueue_style('geart-team', get_template_directory_uri() . '/layouts/team.css', array());
+	wp_enqueue_style('geart-contacts', get_template_directory_uri() . '/layouts/contacts.css', array());
 
 
 

@@ -18,7 +18,8 @@
 	<?php wp_head(); ?>
 
 </head>
-<body <?php if( !is_front_page() ){?> class="page" <?php } ?>>
+
+<?php if( is_page(15) ){?><body class="page page-about"><?php } if( !is_front_page() ){?><body class="page"><?php } ?>
 
 	<div class="overlay-bg"></div>
 

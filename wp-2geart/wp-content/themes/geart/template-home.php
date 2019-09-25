@@ -13,33 +13,33 @@ get_header(); ?>
 		<div class="container-fluid">
 			<div class="slider owl-carousel">
 
-						<?php  
-                            wp_reset_query();
+				<?php  
+                    wp_reset_query();
             
-                                $resent_list = new WP_Query(array('post_type'=> 'main_slider', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                    $resent_list = new WP_Query(array('post_type'=> 'main_slider', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
                                 
-                                if ( $resent_list->have_posts() ) :
-                                    while ( $resent_list->have_posts() ) :
-                                    $resent_list->the_post(); ?>
+                    if ( $resent_list->have_posts() ) :
+                        while ( $resent_list->have_posts() ) :
+                            $resent_list->the_post(); ?>
 
-                            		<div class="slider-item">
-										<div class="row">
-											<div class="container container_main_slider">
-												<div class="row">
-                          							<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="<?php esc_url(the_post_thumbnail_url()); ?>" alt="alt" class="img-fluid"></div>
-														<div class="col-xl-6 col-lg-6">
-															<div class="slider-item-cont">
-																<h2><?php esc_html(the_title()); ?></h2>
-																<p><?php esc_html(the_content()); ?></p>
-																<a href="<?php esc_url(the_permalink()); ?>" class="button btn-white btn-arrow"><span>About Service</span><i class="lnr lnr-arrow-right"></i></a>	
-															</div>
-														</div>	
-                            					</div>
+                        <div class="slider-item">
+							<div class="row">
+								<div class="container container_main_slider">
+									<div class="row">
+                          				<div class="col-xl-6 order-xl-2 col-lg-6 order-lg-2"><img src="<?php esc_url(the_post_thumbnail_url()); ?>" alt="alt" class="img-fluid"></div>
+										<div class="col-xl-6 col-lg-6">
+											<div class="slider-item-cont">
+												<h2><?php esc_html(the_title()); ?></h2>
+													<p><?php esc_html(the_content()); ?></p>
+													<a href="<?php esc_url(the_permalink()); ?>" class="button btn-white btn-arrow"><span>About Service</span><i class="lnr lnr-arrow-right"></i></a>	
 											</div>
-										</div>
-									</div>
+										</div>	
+                            		</div>
+								</div>
+							</div>
+						</div>
                          
-                        <?php  endwhile; endif;  wp_reset_query(); ?>
+                    <?php  endwhile; endif;  wp_reset_query(); ?>
 							
 			</div>	
 		</div>
