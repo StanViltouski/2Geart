@@ -262,7 +262,40 @@ var scrollValue = $(window).scrollTop();
 		autoCounter();
 }
 })
+
+
+
+	$('.button-wrap .btn-small').on('click', function(event){
+		event.preventDefault();
+
+		if($(this).hasClass('active')) {
+
+			$(this).html('Show Map').removeClass('active');
+			$(this).parents('.address-item').children('.maps').slideUp(200);
+			$(this).parents('.link').css({
+				'backgroundColor': '#fff',
+			})
+			$('.address .button-wrap .btn-small').css('color', '#febb16');
+			$('.link_city').css('color', '#444');
+			$('.addressItem-block .fa').css('color', '#9b9b9b');
+
+		} else {
+			$(this).parents('.link').css({
+				'backgroundColor': '#febb16',
+			})
+			$(this).html('Hide Map').addClass('active');
+			$(this).parents('.address-item').children('.maps').slideDown(200);
+			$('.address .button-wrap .btn-small').css('color', '#fff');
+			$('.link_city').css('color', '#fff');
+			$('.addressItem-block .fa').css('color', '#fff');
+
+		}
+	});
+
+
 </script>
+
+
 
 </body>
 </html>

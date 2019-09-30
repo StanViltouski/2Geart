@@ -517,7 +517,7 @@
 
 @media (max-width: 575.98px) {
 
-  .page_title-inner a{position: inherit;}
+  .page_title-inner a{position: static;}
 
   .list-image {min-height: 250px;}
 

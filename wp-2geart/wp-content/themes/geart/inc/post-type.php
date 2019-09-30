@@ -176,7 +176,7 @@ function geart_custompost_type_team() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'team' ),
+		'rewrite'            => array( 'slug' => 'teams' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -187,6 +187,34 @@ function geart_custompost_type_team() {
 	register_post_type( 'team', $args );
 }
 add_action( 'init', 'geart_custompost_type_team' );
+
+
+//Contacts
+
+function geart_custompost_type_contacts() {
+	$labels = array(
+		'name'                  => 'Contacts',
+		'singular_name'         => 'Contact',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'contact' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-admin-site',
+	);
+	register_post_type( 'contact', $args );
+}
+add_action( 'init', 'geart_custompost_type_contacts' );
 
 
 

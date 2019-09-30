@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="button-wrap">
-					<a href="form.html" class="button btn-big headerBtn-big-mobile">Send Request</a>
+					<a href="\form" class="button btn-big headerBtn-big-mobile">Send Request</a>
 					<a href="#" class="toggle-mnu"><span></span></a>
 				</div>
 			</div>
