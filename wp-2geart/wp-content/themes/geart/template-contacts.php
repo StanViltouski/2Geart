@@ -18,7 +18,7 @@ get_header(); ?>
 								<?php  
                     				wp_reset_query();
             
-                    				$resent_list = new WP_Query(array('post_type'=> 'contact', 'order'=> 'ASC', 'posts_per_page'=> -1));
+                    				$resent_list = new WP_Query(array('post_type'=> 'contacts', 'order'=> 'ASC', 'posts_per_page'=> -1));
                     				$count = 0; 
                     				if ( $resent_list->have_posts() ) :
                         				while ( $resent_list->have_posts() ) :

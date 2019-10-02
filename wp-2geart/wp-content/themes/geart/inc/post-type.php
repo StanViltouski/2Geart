@@ -15,7 +15,7 @@ function geart_custompost_type_main_slider() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolio' ),
+		'rewrite'            => array( 'slug' => 'slider' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -73,7 +73,7 @@ function geart_custompost_type_portfolio() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolios' ),
+		'rewrite'            => array( 'slug' => 'portfolio' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'show_in_rest'       => true,
@@ -109,7 +109,7 @@ add_action( 'init', 'custom_taxonomy_for_portfolio', 0 );
 
 function geart_custompost_type_service() {
 	$labels = array(
-		'name'                  => 'Service',
+		'name'                  => 'Services',
 		'singular_name'         => 'Service',
 
 	);
@@ -125,7 +125,7 @@ function geart_custompost_type_service() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'thumbnail'),
+		'supports'           => array( 'title', 'thumbnail'),
 		'menu_icon'			 =>  'dashicons-hammer',
 	);
 	register_post_type( 'service', $args );

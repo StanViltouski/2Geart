@@ -32,125 +32,35 @@ get_header(); ?>
 
 			<div class="list-items" id="services-grid">
 
-				<div class="list-item mix all">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Design</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+				<?php  
+                    wp_reset_query();
+            
+                    $resent_list = new WP_Query(array('post_type'=> 'service', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                                
+                    if ( $resent_list->have_posts() ) :
+                        while ( $resent_list->have_posts() ) :
+                            $resent_list->the_post(); ?>
+
+							<div class="list-item mix all">
+								<div class="list-row">
+									<div class="list-content">
+										<div class="list-composition">
+											<h3 class="h3"><?php esc_html(the_title()); ?></h3>
+											<div class="list-text">
+												<?php if(get_post_meta($post->ID, $key = 'content', $single = true)){ ?>
+                            					<p><?php echo esc_html(get_post_meta($post->ID, $key = 'content', $single = true));?></p>
+                    							<?php }  ?>
+											</div>
+											<a href="<?php if(get_post_meta($post->ID, $key = 'link', $single = true)){ echo esc_html(get_post_meta($post->ID, $key = 'link', $single = true)); } ?>" class="button">See More <i class='lnr lnr-chevron-right'></i></a>
+										</div>						
+									</div>
+									<div class="list-image" style="background-image: url(<?php esc_html(the_post_thumbnail_url()); ?>)"></div>
 								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services/design.png)"></div>
-					</div>
-				</div>	
-				
-				<!-- // -->
-				<div class="list-item mix web all">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Web Development</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services/web_design.png)"></div>
-					</div>
-				</div>
-				<!-- // -->
-				<div class="list-item mix app all">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">App Development</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services/app_design.png)"></div>
-					</div>
-				</div>
-				<!-- // -->
-				<div class="list-item mix internet all">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Internet Marketing</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services/internet_marketing.png)"></div>
-					</div>
-				</div>
-				<!-- ENd all services -->
-				<!-- Design	 -->
-				<div class="list-item mix design">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Web Design</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services-design/web-design.png)"></div>
-					</div>
-				</div>
-				<div class="list-item mix design">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Add Design</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services-design/web-development.png)"></div>
-					</div>
-				</div>
-				<div class="list-item mix design">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Brading</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services-design/app-design.png)"></div>
-					</div>
-				</div>
-				<div class="list-item mix design">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Graphic Design</h3>
-								<div class="list-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								</div>
-								<a href="#" class="button">See More <!-- <i class='fa fa-angle-right'></i> --><i class='lnr lnr-chevron-right'></i></a>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/services-design/graphic-design.png)"></div>
-					</div>
-				</div>
-				<!-- END Design	 -->					
+							</div>	
+
+				<?php  endwhile; endif;  wp_reset_query(); ?>
+									
 			</div>
 		</div>
 
