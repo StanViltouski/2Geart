@@ -1,7 +1,7 @@
 <?php 
 
 /**
-* Template name: Web Development (services) Template
+* Template name: Services Web Development Template
 */
 
 get_header(); ?>

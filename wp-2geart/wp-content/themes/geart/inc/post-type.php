@@ -90,7 +90,7 @@ add_action( 'init', 'geart_custompost_type_portfolio' );
 
  function custom_taxonomy_for_portfolio() {
 	$args = array(
-		'label'        => __( 'Categories Portfolio', 'textdomain' ),
+		'label'        => __( 'Categories Portfolio', 'geart' ),
 		'public'       => true,
 		'rewrite'      => true,
 		'hierarchical' => true
@@ -131,6 +131,25 @@ function geart_custompost_type_service() {
 	register_post_type( 'service', $args );
 }
 add_action( 'init', 'geart_custompost_type_service' );
+
+
+
+ function custom_taxonomy_for_service() {
+
+	$args = array(
+		'label'        => __( 'Page', 'geart' ),
+		'public'       => true,
+		'rewrite'      => false,
+		'hierarchical' => true
+	);
+	
+	register_taxonomy( 'services-page', 'service', $args );
+
+}
+
+add_action( 'init', 'custom_taxonomy_for_service', 0 );
+
+
 
 
 //Certificates

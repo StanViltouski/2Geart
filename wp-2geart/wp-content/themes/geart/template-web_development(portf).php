@@ -20,7 +20,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'web-development' )
+            		            	'terms'   => array( 'web-dev' )
             		        	)
             		    )
             		);

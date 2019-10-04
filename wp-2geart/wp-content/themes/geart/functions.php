@@ -119,6 +119,7 @@ function geart_widgets_init() {
 }
 add_action( 'widgets_init', 'geart_widgets_init' );
 
+
 /**
  * Enqueue scripts and styles.
  */
