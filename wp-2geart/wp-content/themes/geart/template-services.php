@@ -16,12 +16,21 @@ get_header(); ?>
 						</div>
 						<div class="filter-wrap">
 							<ul class="filter-list">
-								<li id="button_filter" class="filter filterAction_mobile active" data-filter=".all">All services <i class="fa fa-chevron-down" aria-hidden="true"></i></li>
-								<li class="filter filter_mobile" data-filter=".design">Design</li>
-								<li class="filter filter_mobile" data-filter=".web">Web Development</li>
-								<li class="filter filter_mobile" data-filter=".app">App Development</li>
-								<li class="filter filter_mobile" data-filter=".internet">Internet Marketing</li>
-							</ul>
+
+							<?php $wcatTerms = get_terms('services-page', 
+                            	array(
+                                	'hide_empty' => 0,
+                                	'parent'     => 0,
+                                	'orderby'    => 'count',
+                                	'order'      => 'DESK',
+                            	)); 
+
+                        	foreach($wcatTerms as $wcatTerm) : ?>
+
+                        		<li class="filter filter_mobile"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
+
+                        	<?php endforeach; ?>
+						</ul>
 						</div>
 					</div>	
 				</div>	
@@ -33,14 +42,19 @@ get_header(); ?>
 			<div class="list-items" id="services-grid">
 
 
-				<?php  
-                    wp_reset_query();
-            
-                    $resent_list = new WP_Query(array('post_type'=> 'service', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
-                                
-                    if ( $resent_list->have_posts() ) :
-                        while ( $resent_list->have_posts() ) :
-                            $resent_list->the_post(); ?>
+				<?php
+                wp_reset_query();
+                $args = array( 'post_type'=> 'service', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
+                    array(
+                        'taxonomy' => 'services-page',
+                        'field'    => 'slug',
+                        'terms'   => array( 'services' )
+                    )
+                )
+            	); 
+
+            			$posts = get_posts($args);
+                		foreach($posts as $post) :setup_postdata($post);?>
 
 							<div class="list-item mix all">
 								<div class="list-row">
@@ -59,7 +73,7 @@ get_header(); ?>
 								</div>
 							</div>	
 
-				<?php  endwhile; endif;  wp_reset_query(); ?>
+				<?php endforeach; wp_reset_query(); ?>
 									
 			</div>
 		</div>
