@@ -9,26 +9,7 @@ get_header(); ?>
 
 
 <main class="content mr-top">
-		<div class="page-nav">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-12">
-						<div class="page_title">
-							All Services
-						</div>
-						<div class="filter-wrap">
-							<ul class="filter-list">
-								<li id="button_filter" class="filter filterAction_mobile active" data-filter=".all">All services <i class="fa fa-chevron-down" aria-hidden="true"></i></li>
-								<li class="filter filter_mobile" data-filter=".design">Design</li>
-								<li class="filter filter_mobile" data-filter=".web">Web Development</li>
-								<li class="filter filter_mobile" data-filter=".app">App Development</li>
-								<li class="filter filter_mobile" data-filter=".internet">Internet Marketing</li>
-							</ul>
-						</div>
-					</div>	
-				</div>	
-			</div>
-		</div>
+		<?php get_template_part( 'template-parts/services-category-menu-inner', 'services-filter-menu-inner' ); ?>
 
 		<div id="services" class="s-services clearfix">
 

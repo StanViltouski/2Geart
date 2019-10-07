@@ -231,7 +231,7 @@ function geart_custompost_type_contacts() {
 		'supports'           => array( 'title', 'thumbnail'),
 		'menu_icon'			 =>  'dashicons-admin-site',
 	);
-	register_post_type( 'contact', $args );
+	register_post_type( 'contacts', $args );
 }
 add_action( 'init', 'geart_custompost_type_contacts' );
 

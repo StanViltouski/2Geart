@@ -8,6 +8,7 @@ get_header(); ?>
 
 
 <main class="content mr-top">
+
 		<?php get_template_part( 'template-parts/services-category-menu-inner', 'services-filter-menu-inner' ); ?>
 
 		<div id="services" class="s-services clearfix">
