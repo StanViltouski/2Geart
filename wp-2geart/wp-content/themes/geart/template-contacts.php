@@ -13,7 +13,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="col-12">
 						<h1 class="page_title page_title_contact">Our Contacts</h1>
-						<div class="filter-wrap">
+						<div class="filter-wrap-contacts">
 							<ul class="filter-list filter-list-contacts">
 								<?php  
                     				wp_reset_query();

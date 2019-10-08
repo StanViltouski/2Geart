@@ -16,6 +16,7 @@ get_header(); ?>
 						</div>
 						<div class="filter-wrap">
 							<ul class="filter-list">
+								<li id="service_title_filter" class="filter filterAction_mobile" data-toggle='' data-target="#modal-filter-portf"><a href="/services" style="color: #febb16;">All services </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
 
 							<?php $wcatTerms = get_terms('services-page', 
                             	array(
@@ -23,6 +24,7 @@ get_header(); ?>
                                 	'parent'     => 0,
                                 	'orderby'    => 'count',
                                 	'order'      => 'DESK',
+
                             	)); 
 
                         	foreach($wcatTerms as $wcatTerm) : ?>
@@ -42,19 +44,24 @@ get_header(); ?>
 			<div class="list-items" id="services-grid">
 
 
-				<?php
-                wp_reset_query();
-                $args = array( 'post_type'=> 'service', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
-                    array(
-                        'taxonomy' => 'services-page',
-                        'field'    => 'slug',
-                        'terms'   => array( 'services' )
-                    )
-                )
-            	); 
+				<?php 
+					wp_reset_query();
 
-            			$posts = get_posts($args);
-                		foreach($posts as $post) :setup_postdata($post);?>
+  					$best_portfolio = array(
+    					'post_type' => 'service',
+    					'posts_per_page' => -1,
+    					'meta_query' => array( 
+      						array(
+        						'key' => 'show_on_services',
+        						'value' => '1'
+      						)
+   						 )
+  					);
+
+ 							$best_portfolio_query = new WP_Query( $best_portfolio );
+  							while ( $best_portfolio_query->have_posts() ) :
+    							$best_portfolio_query->the_post(); 
+				?>
 
 							<div class="list-item mix all">
 								<div class="list-row">
@@ -71,12 +78,44 @@ get_header(); ?>
 									</div>
 									<div class="list-image" style="background-image: url(<?php esc_html(the_post_thumbnail_url()); ?>)"></div>
 								</div>
-							</div>	
+							</div>
 
-				<?php endforeach; wp_reset_query(); ?>
+
+				<?php endwhile; wp_reset_query(); ?>
 									
 			</div>
 		</div>
+
+
+	<!-- Modal -->
+
+<div class="modal fade" id="modal-filter-portf" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header-portf">
+                <span class="modal-header-title">All Services</span><i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-filter-list">
+                    <?php $wcatTerms = get_terms('services-page', 
+                        array(
+                            'hide_empty' => 0,
+                            'parent'     => 0,
+                            'orderby'    => 'count',
+                            'order'      => 'DESK',
+                        )); 
+
+                    foreach($wcatTerms as $wcatTerm) : ?>
+
+                      <li class="filter"><a href="<?php echo ('/'. $wcatTerm->slug) ?>"><?php echo $wcatTerm->name; ?></a></li>
+
+                    <?php endforeach; ?>
+
+                </ul>  
+            </div>  
+        </div>
+    </div>
+</div>
 
 
 

@@ -380,13 +380,13 @@
 
 /*Page Portfolio*/
 
-  #title_filter{
+  #title_filter, #service_title_filter{
     display: flex;
     justify-content: end;
     padding: 20px 0 0 14px;
   }
 
-  #title_filter a {
+  #title_filter a, #service_title_filter a {
     margin: 0 auto;
     font-size: 26px;
     font-weight: 600;
@@ -394,7 +394,7 @@
     color: #444;
   }
 
-  #title_filter i {
+  #title_filter i, #service_title_filter i {
     align-self: center;
     color: #9b9b9b;
   }

@@ -1,21 +1,38 @@
 <?php get_header(); ?>
 
 
-<section style="height: 1000px;">
+<section>
 
 	<?php
 
-						if ( have_posts() ) :
+						if ( have_posts() ) {
 						while ( have_posts() ) :
 								the_post(); ?>
 
-								<div class="text-center mt-5"><?php the_title(); ?></div>
-								<div class="text-center mt-5"><?php the_post_thumbnail(); ?></div>
+
+								<?php the_content(); ?>
 
 
+						<?php 	endwhile; } ?>
 
+						
+		<!--Widget -->
 
-						<?php 	endwhile; endif; ?>
+				<div class="s-order-wrap s-order-wrap_app">
+					<div class="container">
+						<div class="row no-gutter">
+							<div class="col-12 widget-wrapper-padding">
+								<div class="s-order service_widget">
+									<div class="title">READY TO TALK?</div>
+									 <?php esc_html(dynamic_sidebar( 'Services Plate' )); ?>
+									<div class="button-wrap">
+										<a href="/form" class="button btn-white"><span>Send Request</span><i class="lnr lnr-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 	
 
 

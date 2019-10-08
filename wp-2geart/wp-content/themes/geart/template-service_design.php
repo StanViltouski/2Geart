@@ -9,7 +9,7 @@ get_header(); ?>
 
 <main class="content mr-top">
 
-		<?php get_template_part( 'template-parts/services-category-menu-inner', 'services-filter-menu-inner' ); ?>
+		<?php get_template_part( 'template-parts/service-design-menu-inner', 'services-design-menu-inner' ); ?>
 
 		<div id="services" class="s-services clearfix">
 
@@ -54,6 +54,7 @@ get_header(); ?>
 		</div>
 
 
+<?php get_template_part( 'template-parts/service-modal-filter', 'service-modal' ); ?>
 
 
 

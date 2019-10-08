@@ -197,8 +197,6 @@ body.modal-open {
 
 @media only screen and (max-width: 1024px) {
 
-  .item-project {height: 208px;}
-
   .page-about .content {border: none;}
 
   .page-about .content .s-header {

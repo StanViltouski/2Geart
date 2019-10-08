@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<div id="s-header-content_post" class="s-header-content s-header-content_post">
 				<div class="container">
-					<div class="button_back"><a href="javascript:history.back();">Services</a></div>
+					<div class="button_back"><a href="javascript:history.back();"><img src="<?php bloginfo('template_directory') ?>/img/arrow-back.svg" alt="arrow back">Services</a></div>
 					<div class="s-header-title"><?php the_title(); ?></div>
 				</div>
 			</div>	
@@ -27,13 +27,15 @@ get_header(); ?>
 				
 				<?php the_content(); ?>
 
+			</div>
+		</article>
 
-				<!--Widget -->
+		<!--Widget -->
 
 				<div class="s-order-wrap s-order-wrap_app">
 					<div class="container">
 						<div class="row no-gutter">
-							<div class="col-12">
+							<div class="col-12 widget-wrapper-padding">
 								<div class="s-order service_widget">
 									<div class="title">READY TO TALK?</div>
 									 <?php esc_html(dynamic_sidebar( 'Services Plate' )); ?>
@@ -45,10 +47,6 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-
-			</div>
-		</article>
-
 		
 <?php endwhile; ?>	
 
