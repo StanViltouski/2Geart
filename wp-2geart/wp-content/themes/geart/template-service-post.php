@@ -6,10 +6,10 @@
 
 get_header(); ?>
 
-	<?php
-		while ( have_posts() ) : the_post(); ?>
+<?php
+	while ( have_posts() ) : the_post(); ?>
 
-<main class="content mr-top mr-top_app">
+	<main class="content mr-top mr-top_app">
 		<div class="s-header s-header_app" style="background: url(<?php the_post_thumbnail_url(); ?>)no-repeat center/cover">
 
 			<div id="s-header-content_post" class="s-header-content s-header-content_post">
@@ -32,27 +32,24 @@ get_header(); ?>
 
 		<!--Widget -->
 
-				<div class="s-order-wrap s-order-wrap_app">
-					<div class="container">
-						<div class="row no-gutter">
-							<div class="col-12 widget-wrapper-padding">
-								<div class="s-order service_widget">
-									<div class="title">READY TO TALK?</div>
-									 <?php esc_html(dynamic_sidebar( 'Services Plate' )); ?>
-									<div class="button-wrap">
-										<a href="/form" class="button btn-white"><span>Send Request</span><i class="lnr lnr-arrow-right"></i></a>
-									</div>
+			<div class="s-order-wrap s-order-wrap_app">
+				<div class="container">
+					<div class="row no-gutter">
+						<div class="col-12 widget-wrapper-padding">
+							<div class="s-order service_widget">
+								<div class="title">READY TO TALK?</div>
+								 <?php esc_html(dynamic_sidebar( 'Services Plate' )); ?>
+								<div class="button-wrap">
+									<a href="/form" class="button btn-white"><span>Send Request</span><i class="lnr lnr-arrow-right"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-		
+			</div>
+
+	</main>
 <?php endwhile; ?>	
-
-
-</main>
-
 
 
 <?php get_footer(); ?>

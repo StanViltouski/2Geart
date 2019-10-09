@@ -135,8 +135,12 @@ function geart_scripts() {
 	wp_enqueue_style('geart-services', get_template_directory_uri() . '/layouts/services.css', array());
 	wp_enqueue_style('geart-about', get_template_directory_uri() . '/layouts/about.css', array());
 	wp_enqueue_style('geart-team', get_template_directory_uri() . '/layouts/team.css', array());
-	wp_enqueue_style('geart-contacts', get_template_directory_uri() . '/layouts/contacts.css', array());
+	
+	if ( is_page( 'contacts' ) ) {
+		wp_enqueue_style('geart-contacts', get_template_directory_uri() . '/layouts/contacts.css', array());
+	}
 	wp_enqueue_style('geart-form', get_template_directory_uri() . '/layouts/form.css', array());
+	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 
 

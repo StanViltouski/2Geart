@@ -102,7 +102,18 @@ get_header(); ?>
 
 					<div class="item-project overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
 							<div class="item-project_category">
-								<span>mobile app</span>
+								<?php 
+                       				$postID = get_the_ID();
+
+                        			$wcatTerms = wp_get_object_terms($postID, 'categories-portfolio', array(
+                                		'childless' => true,
+                       				));
+                       
+                        			foreach($wcatTerms as $wcatTerm) : ?>
+
+                               			<span> <?php  echo ($wcatTerm->name);?> </span> 
+                               			
+                      			 	<?php endforeach; ?>
 							</div>
 							<div class="item-project_title">
 								<?php esc_html(the_title()); ?>

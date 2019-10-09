@@ -278,29 +278,6 @@
 
     // -> START Basic Fields
 
-    /*Header*/
-
-     Redux::setSection( $opt_name, array(
-        'title'            => esc_html__( 'Header', 'geart' ),
-        'id'               => 'header',
-        'customizer_width' => '233px',
-        'desc'             => esc_html__( 'Upload your logo', 'geart' ),
-        'fields'           => array(
-            array(
-                'id'       => 'geart-desk-logo',
-                'type'     => 'media',
-                'url'      => true,
-                'title'    => esc_html__( 'Your desktop logo', 'geart' ),
-                'compiler' => 'true',
-                'desc'     => esc_html__( 'Upload your desktop logo', 'geart' ),
-                'subtitle' => esc_html__( 'Recommended size 233 x 102px', 'geart' ),
-                'default'  => '',
-            ),
-
-        )
-    ) );
-
-
      /*Footer address*/
 
       Redux::setSection( $opt_name, array(

@@ -386,11 +386,11 @@ h4, .h4 {
 
 .toggle-mnu.on {
   background-color: transparent;
-  border: 1px solid #9B9B9B; }
+  border: 1px solid #fff; }
 
 .toggle-mnu.on span:after,
 .toggle-mnu.on span:before {
-  background-color: #9B9B9B; }
+  background-color: #fff; }
 
 .toggle-mnu.on span {
   background-color: transparent; }
@@ -425,7 +425,8 @@ h4, .h4 {
 .overlay-bg {
   display: none;
   position: fixed;
-  background-color: #444;
+  color: #000;
+  background-color: #febb16;
   z-index: 98;
   right: 0;
   top: 0;
@@ -1658,12 +1659,14 @@ section .button-wrap a {
     padding: 0; }
 
   .button-wrap {
-    margin-top: 26px; }
+    margin-top: 21px; }
 
   .toggle-mnu {
     top: 20px;
     right: 20px;
     display: block; }
+
+  .current-menu-item a {color: #fff !important;}
 
   .logo {
     top: 10px;
@@ -1809,7 +1812,7 @@ section .button-wrap a {
     margin-right: 0; }
 
   .main-menu a {
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: 600;
     padding: 0 15px;
@@ -1821,7 +1824,9 @@ section .button-wrap a {
     transition: color .25s ease; }
 
   .main-menu a:hover, .main-menu a:focus {
-    color: #febb16; }
+    color: #000; }
+
+  .main-menu li a:hover:after, .main-menu li a:focus:after { width: 0; }
 
   .main-menu a.active {
     color: #fff !important; }
@@ -1952,6 +1957,10 @@ section .button-wrap a {
 
 
 @media (max-width: 767px) {
+
+   .button-wrap {
+    margin-top: 26px; }
+
   .container {
     max-width: 720px; }
 

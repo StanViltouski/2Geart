@@ -1,6 +1,3 @@
-<?php  global $geart_option; ?>
-<?php $custom_desk_logo = ($geart_option['geart-desk-logo']['url']); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +9,6 @@
 
 	<link rel="icon" href="<?php bloginfo('template_directory') ?>/img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory') ?>/img/favicon/favicon.png">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<?php wp_head(); ?>
 
@@ -28,12 +23,12 @@
 			<div class="row justify-content-end align-items-center">
 
 				<?php 
-                if($custom_desk_logo){ ?>
-                    <a class="logo" href="/"><img class="img-svg" src="<?php echo esc_url($custom_desk_logo); ?>" title="2Geart Design Bureau" alt="logo"></a>
+                if(is_front_page()){ ?>
+                    <a class="logo" href="/"><img class="img-svg" src="<?php bloginfo('template_directory') ?>/img/logo.svg" title="2Geart Design Bureau" alt="logo"></a>
                 <?php 
-                } else {
-                    echo "No image";
-                } ?> 
+                } else { ?>
+                    <a class="logo" href="/"><img class="img-svg" src="<?php bloginfo('template_directory') ?>/img/logo-black.svg" title="2Geart Design Bureau" alt="logo"></a>
+                <?php } ?> 
 
 				<div class="menu-wrap">
 					<nav class="main-menu">
@@ -53,11 +48,11 @@
 
 					</nav>
 					<div class="button-wrap btn-mob">
-						<a href="form.html" class="button btn-big">Send Request</a>	
+						<a href="/form" class="button btn-big">Send Request</a>	
 					</div>
 				</div>
 				<div class="button-wrap">
-					<a href="\form" class="button btn-big headerBtn-big-mobile">Send Request</a>
+					<a href="/form" class="button btn-big headerBtn-big-mobile">Send Request</a>
 					<a href="#" class="toggle-mnu"><span></span></a>
 				</div>
 			</div>
