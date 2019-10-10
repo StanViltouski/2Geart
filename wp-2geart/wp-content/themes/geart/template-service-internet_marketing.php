@@ -21,7 +21,7 @@ get_header(); ?>
                     array(
                         'taxonomy' => 'services-page',
                         'field'    => 'slug',
-                        'terms'   => array( 'marketing' )
+                        'terms'   => array( 'internet-marketing' )
                     )
                 )
             	); 

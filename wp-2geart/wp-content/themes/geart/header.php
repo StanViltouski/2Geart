@@ -5,16 +5,26 @@
 	<meta name="description" content="asdasd">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Main</title>
+	<title>
+		<?php
+            global $page, $paged;
+            wp_title( '|', true, 'right' );
+            bloginfo( 'name' );
+            $site_description = get_bloginfo( 'description', 'display' );
+                if ( $site_description && ( is_home() || is_front_page() ) )
+                    echo " | $site_description";
+                if ( $paged >= 2 || $page >= 2 )
+                    echo ' | ' . sprintf( __( 'Page %s', 'sm' ), max( $paged, $page ) );
+        ?>
+	</title>
 
 	<link rel="icon" href="<?php bloginfo('template_directory') ?>/img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory') ?>/img/favicon/favicon.png">
 
 	<?php wp_head(); ?>
 
 </head>
 
-<?php if( is_page(15) ){?><body class="page page-about"><?php } if( !is_front_page() ){?><body class="page"><?php } ?>
+<?php if( is_page(15) ){?><body class="page page-about"><?php } if( !is_front_page() && !is_404() ){?><body class="page"><?php } ?>
 
 	<div class="overlay-bg"></div>
 

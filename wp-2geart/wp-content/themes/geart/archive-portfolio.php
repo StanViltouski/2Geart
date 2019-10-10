@@ -42,11 +42,15 @@ get_header(); ?>
 			<div class="container-fluid">
 				<div id="portfolio-grid">
 
-					<?php
+					
+				<?php  
+                    wp_reset_query();
+        
+                    $resent_list = new WP_Query(array('post_type'=> 'portfolio', 'order'=> 'ASC', 'posts_per_page'=> -1));
 
-						if ( have_posts() ) :
-						while ( have_posts() ) :
-								the_post(); ?>
+                    if ( $resent_list->have_posts() ) :
+                       	while ( $resent_list->have_posts() ) :
+                          		$resent_list->the_post(); ?>
 								
 						<div class="item-project item-project-portfolio overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
 							<div class="item-project_category">
@@ -75,7 +79,7 @@ get_header(); ?>
 							</div>
 						</div>
 
-					<?php endwhile; endif; ?>
+					<?php  endwhile; endif;  wp_reset_query(); ?>
 					
 				</div>
 			</div>

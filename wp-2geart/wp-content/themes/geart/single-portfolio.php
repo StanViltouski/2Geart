@@ -55,7 +55,6 @@ $next_post = $key + 1;
 
 
 <section class="single_portfolio_widgets">
-	<div class="container">
 		<!--Widget -->
 
 		<div class="s-order-wrap s-order-wrap_app">
@@ -76,7 +75,6 @@ $next_post = $key + 1;
 
 
 		<div class="change_post">
-			<div class="container">
 				<div class="row">
 					<?php 
 						wp_reset_query();
@@ -87,7 +85,7 @@ $next_post = $key + 1;
 	            			while ( $resent_list->have_posts() ) :
 	            			$resent_list->the_post(); ?>
 
-								<div class="col-6 change_post_link" style="background-image: url(<?php esc_url(the_post_thumbnail_url()); ?>);">
+								<div class="col-6 change_post_link" style="background: url(<?php esc_url(the_post_thumbnail_url()); ?>)no-repeat center/cover;">
 									<a href="<?php esc_url(the_permalink()); ?>"><h3>Project Prev</h3></a>
 									<div class="postLink_desc">
 										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.</p>
@@ -106,7 +104,7 @@ $next_post = $key + 1;
 	            			while ( $resent_list->have_posts() ) :
 	            			$resent_list->the_post(); ?>
 
-								<div class="col-6 change_post_link" style="background-image: url(<?php esc_url(the_post_thumbnail_url()); ?>);">
+								<div class="col-6 change_post_link" style="background: url(<?php esc_url(the_post_thumbnail_url()); ?>)no-repeat center/cover;">
 									<a href="<?php esc_url(the_permalink()); ?>"><h3>Project Prev</h3></a>
 									<div class="postLink_desc">
 										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.</p>
@@ -115,9 +113,7 @@ $next_post = $key + 1;
 
 						<?php endwhile; }  wp_reset_query(); ?>
 				</div>	
-			</div>
 		</div>
-	</div>
 </section>
 	
 <?php get_footer(); ?>

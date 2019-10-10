@@ -15,7 +15,7 @@ function geart_custompost_type_main_slider() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'slider' ),
+		'rewrite'            => array( 'slug' => 'portfolio' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -73,7 +73,7 @@ function geart_custompost_type_portfolio() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolio' ),
+		'rewrite'            => array( 'slug' => 'portfolio-work' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'show_in_rest'       => true,
@@ -150,6 +150,33 @@ add_action( 'init', 'geart_custompost_type_service' );
 add_action( 'init', 'custom_taxonomy_for_service', 0 );
 
 
+
+//About
+
+function geart_custompost_type_about() {
+	$labels = array(
+		'name'                  => 'About Bureau',
+		'singular_name'         => 'About Bureau',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'about-bureau' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail'),
+		'menu_icon'			 =>  'dashicons-format-status',
+	);
+	register_post_type( 'about-bureau', $args );
+}
+add_action( 'init', 'geart_custompost_type_about' );
 
 
 //Certificates

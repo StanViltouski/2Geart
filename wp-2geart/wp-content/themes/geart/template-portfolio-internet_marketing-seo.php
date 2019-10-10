@@ -1,11 +1,10 @@
 <?php 
 
 /**
-* Template name: Design_banner Template
+* Template name: Portfolio Internet-Marketing SEO Template
 */
 
 get_header(); ?>
-
 	<main class="content mr-top">
 
 		<?php get_template_part( 'template-parts/portfolio-category-menu-inner-two', 'filter-menu-inner-two' ); ?>
@@ -20,7 +19,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'banner' )
+            		            	'terms'   => array( 'seo-work' )
             		        	)
             		    )
             		);
@@ -53,13 +52,13 @@ get_header(); ?>
 							</div>
 						</div>
 
-			<?php endforeach; wp_reset_query(); ?>
+				<?php endforeach; wp_reset_query(); ?>
 					
 				</div>
 			</div>
 		</section>
 	</main>
 
-	<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
+<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
 	
 <?php get_footer(); ?>

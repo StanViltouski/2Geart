@@ -1,7 +1,7 @@
 <?php 
 
 /**
-* Template name: Web Development (Portf) Template
+* Template name: Portfolio Web-Development Template
 */
 
 get_header(); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'web-dev' )
+            		            	'terms'   => array( 'web-development-work' )
             		        	)
             		    )
             		);

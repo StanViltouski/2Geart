@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<div id="s-header-content_post" class="s-header-content s-header-content_post">
 				<div class="container">
-					<div class="button_back"><a href="javascript:history.back();"><img src="<?php bloginfo('template_directory') ?>/img/arrow-back.svg" alt="arrow back">Services</a></div>
+					<div class="button_back"><a href="/services"><img src="<?php bloginfo('template_directory') ?>/img/arrow-back.svg" alt="arrow back">Services</a></div>
 					<div class="s-header-title"><?php the_title(); ?></div>
 				</div>
 			</div>	

@@ -1,12 +1,13 @@
 <?php 
 
 /**
-* Template name: Web Development_HTML Template
+* Template name: Portfolio Design Logo Template
 */
 
 get_header(); ?>
-	<main class="content mr-top">
 
+	<main class="content mr-top">
+		
 		<?php get_template_part( 'template-parts/portfolio-category-menu-inner-two', 'filter-menu-inner-two' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
@@ -19,7 +20,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'html-css' )
+            		            	'terms'   => array( 'logo-work' )
             		        	)
             		    )
             		);
@@ -30,7 +31,18 @@ get_header(); ?>
 								
 						<div class="item-project overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
 							<div class="item-project_category">
-								<span>mobile app</span>
+								<?php 
+                       				$postID = get_the_ID();
+
+                        			$wcatTerms = wp_get_object_terms($postID, 'categories-portfolio', array(
+                                		'childless' => true,
+                       				));
+                       
+                        			foreach($wcatTerms as $wcatTerm) : ?>
+
+                               			<span> <?php  echo ($wcatTerm->name);?> </span> 
+                               			
+                      			 	<?php endforeach; ?>
 							</div>
 							<div class="item-project_title">
 								<?php esc_html(the_title()); ?>
@@ -48,6 +60,6 @@ get_header(); ?>
 		</section>
 	</main>
 
-<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
+	<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
 	
 <?php get_footer(); ?>

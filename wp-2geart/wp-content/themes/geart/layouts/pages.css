@@ -1,8 +1,8 @@
 .page .main-menu a {color: #000;}
-/*
+
 .page .main-menu a:hover, .page .main-menu a:focus,
 .page .main-menu a.active {color: #febb16;}
-*/
+
 .page_title, .page_title-inner {
   padding-top: 70px;
   margin-bottom: 35px;

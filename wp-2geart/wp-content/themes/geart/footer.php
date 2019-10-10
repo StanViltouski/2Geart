@@ -17,12 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<nav class="breadcrumb">
-						<ul>
-							<li><a href="/">Home</a></li>
-							<li>Portfolio</li>
-						</ul>
-					</nav>
+					<?php echo get_breadcrumbs(); ?>
 				</div>
 			</div>
 		</div>
@@ -237,7 +232,7 @@ function autoCounter() {
 
                   setInterval(function () {
                      if (count2 < 3) {$(countItem).html((++count2));}
-				}, 1333);
+				}, 1250);
 
                   setInterval(function () {
                      if (count3 < 320) {$(countProj).html((++count3));}
@@ -245,7 +240,7 @@ function autoCounter() {
 
                  setInterval(function () {
                      if (count4 < 20) {$(countMarket).html((++count4)+"+");}
-				}, 190);
+				}, 180);
                
 
 
@@ -262,8 +257,6 @@ var scrollValue = $(window).scrollTop();
 		autoCounter();
 }
 })
-
-
 
 	$('.button-wrap .btn-small').on('click', function(event){
 		event.preventDefault();
@@ -292,9 +285,7 @@ var scrollValue = $(window).scrollTop();
 		}
 	});
 
-
 </script>
-
 
 
 </body>

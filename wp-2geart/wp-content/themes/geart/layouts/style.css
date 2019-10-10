@@ -501,7 +501,7 @@ h4, .h4 {
   color: #febb16; }
 
 .fix-line .button-wrap {
-  margin-right: 120px; }
+  margin-right: 160px; }
 
 .logo {
   position: absolute;
@@ -623,7 +623,8 @@ section h2 {
   font-size: 48px;
   font-weight: bold;
   color: #444;
-  text-align: center; }
+  line-height: 1;
+}
 
 section .button-wrap {
   text-align: center;
@@ -1681,7 +1682,7 @@ section .button-wrap a {
     height: auto; }
 
   .fix-line .button-wrap {
-    margin-right: 90px; }
+    margin-right: 100px; }
 
   .fix-line .button-wrap .menu-wrap,
   .fix-line .button-wrap .button.btn-big {
@@ -1938,8 +1939,9 @@ section .button-wrap a {
     margin-top: 20px;
     text-align: center; }
 
-  .s-about img {
-    width: 60%; }
+  .s-about img {width: 60%;}
+
+  .s-about_img {text-align: center;}
 
   .main-menu a .fa, .lnr {
     display: inline-block; }
@@ -1958,8 +1960,9 @@ section .button-wrap a {
 
 @media (max-width: 767px) {
 
-   .button-wrap {
-    margin-top: 26px; }
+  .logo .img-svg {height: 59px; }
+
+  .button-wrap {margin-top: 26px; }
 
   .container {
     max-width: 720px; }
@@ -2189,9 +2192,6 @@ section .button-wrap a {
 
   .logo {
     top: 15px; }
-
-  .logo .img-svg {
-    height: 59px; }
 
   .button-wrap {
     margin-right: 0; }

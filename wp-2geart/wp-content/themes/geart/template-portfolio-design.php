@@ -1,13 +1,13 @@
 <?php 
 
 /**
-* Template name: App Development_ios Template
+* Template name: Portfolio Design Template
 */
-
 get_header(); ?>
-	<main class="content mr-top">
 
-	<?php get_template_part( 'template-parts/portfolio-category-menu-inner', 'filter-menu-inner' ); ?>
+<main class="content mr-top">
+
+	<?php get_template_part( 'template-parts/portfolio-category-menu-inner_one', 'filter-menu-inner_one' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -19,15 +19,14 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'ios' )
+            		            	'terms'   => array( 'design-work' )
             		        	)
             		    )
             		);
 
                 $posts = get_posts($args);
 
-                foreach($posts as $post) : ?>
-								
+                foreach($posts as $post) : ?>								
 						<div class="item-project overlay" style="background-image: url(<?php esc_url(the_post_thumbnail_url());  ?>);">
 							<div class="item-project_category">
 								<?php 
@@ -51,14 +50,13 @@ get_header(); ?>
 								<p>Application</p>
 							</div>
 						</div>
-
-			<?php endforeach; wp_reset_query(); ?>
+				<?php endforeach; wp_reset_query(); ?>
 					
 				</div>
 			</div>
 		</section>
-	</main>
+</main>
 
-<?php get_template_part( 'template-parts/modal-filter', 'modal-filter' ); ?>
-	
+<?php get_template_part( 'template-parts/modal-filter-inner-one', 'modal-filter-inner-one' ); ?>
+		
 <?php get_footer(); ?>

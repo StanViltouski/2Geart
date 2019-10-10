@@ -13,7 +13,7 @@
 			
 					<div class="filter-wrap">
                         <ul class="filter-list">
-                            <li id="title_filter-inner" class="filter" data-toggle="" data-target="#modal-filter-inner-two"><a href="/portfolio">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+                            <li id="title_filter-inner" class="filter" data-toggle="" data-target="#modal-filter-inner-two"><a href="/portfolio-work">All Projects </a><i class="fa fa-chevron-down" aria-hidden="true"></i></li>
                         
                             <?php 
                             	$term_name = (get_queried_object()->post_name);

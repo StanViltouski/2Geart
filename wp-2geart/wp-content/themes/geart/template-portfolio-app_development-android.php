@@ -1,14 +1,13 @@
 <?php 
 
 /**
-* Template name: Design_graphic Template
+* Template name: Portfolio App Development Android Template
 */
 
 get_header(); ?>
-
 	<main class="content mr-top">
-		
-		<?php get_template_part( 'template-parts/portfolio-category-menu-inner-two', 'filter-menu-inner-two' ); ?>
+
+	<?php get_template_part( 'template-parts/portfolio-category-menu-inner-two', 'filter-menu-inner-two' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -20,7 +19,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'graphic' )
+            		            	'terms'   => array( 'android-work' )
             		        	)
             		    )
             		);
@@ -60,6 +59,6 @@ get_header(); ?>
 		</section>
 	</main>
 
-	<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
-
+<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
+	
 <?php get_footer(); ?>

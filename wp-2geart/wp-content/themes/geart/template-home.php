@@ -77,7 +77,7 @@ get_header(); ?>
 	</div>
 
 	<section class="s-projects clearfix">
-		<h2>Recent Projects</h2>
+		<h2 class="text-center">Recent Projects</h2>
 		<div class="container-fluid">
 				<div id="best_portfolio_grid">
 
@@ -95,7 +95,7 @@ get_header(); ?>
    						 )
   					);
 
- 					 $best_portfolio_query = new WP_Query( $best_portfolio );
+ 				$best_portfolio_query = new WP_Query( $best_portfolio );
   					while ( $best_portfolio_query->have_posts() ) :
     					$best_portfolio_query->the_post(); 
 				?>
@@ -140,7 +140,7 @@ get_header(); ?>
 	<section class="s-about">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 align-self-center"><img src="<?php if( get_field('abount_us_image') ): ?><?php esc_url(the_field('abount_us_image')); ?><?php endif; ?>" alt="About Us" class="img-fluid"></div>
+				<div class="s-about_img col-lg-5 align-self-center"><img src="<?php if( get_field('abount_us_image') ): ?><?php esc_url(the_field('abount_us_image')); ?><?php endif; ?>" alt="About Us" class="img-fluid"></div>
 
 				<div class="col-lg-7">
 					<?php if(get_post_meta($post->ID, $key = 'abount_us_title', $single = true)){ ?>
@@ -156,8 +156,8 @@ get_header(); ?>
 	</section>
 
 	<section class="s-customers">
-		<h2>Customers</h2>
-		<div class="container ">
+		<h2 class="text-center">Customers</h2>
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="carousel-customers owl-carousel">

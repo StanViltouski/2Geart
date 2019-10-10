@@ -1,60 +1,25 @@
 <?php
 /**
  * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package geart
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main class="content">
+		<div class="s-404">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="desc">
+							<img src="<?php bloginfo('template_directory') ?>/img/404/404.png" alt="alt" class="img-responsive">
+							<h1 class="text-white">Page not found</h1>
+							<span class="text-white">Relax, take it easy. Keep fresh your mind!</span>
+							<a href="/" class="button">Go Home <i class='lnr lnr-chevron-right'></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'geart' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'geart' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'geart' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$geart_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'geart' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$geart_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer();

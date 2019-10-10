@@ -256,6 +256,10 @@
 
 @media (max-width: 767px) {
   .item-project_title {font-size: 22px;}
+
+  .change_post_link {
+    min-height: 350px;
+  }
 }
 
 
@@ -278,6 +282,12 @@
     grid-column: span 1;
     grid-row: span 1;
   }
+
+  .change_post_link {min-height: 170px;}
+
+  .postLink_desc {display: none;}
+
+  .change_post_link a h3 {margin-bottom: 0;}
 
 
 }

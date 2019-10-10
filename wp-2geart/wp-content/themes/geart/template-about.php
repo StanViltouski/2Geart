@@ -34,7 +34,7 @@ get_header(); ?>
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2>Diplomas & Certificates</h2>	
+						<h2 class="text-center">Diplomas & Certificates</h2>	
 					</div>
 				</div>
 			</div>
@@ -74,35 +74,30 @@ get_header(); ?>
 
 			<div class="list-items">
 
-				<div class="list-item">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Studio Foundation</h3>
-								<div class="list-text">
-									<p>We believe a designer is not only an artist but also an engineer. And that success comes with the attention to details. We are always fully engaged in the project from beginning to end. We'll take you from an idea to its implementation.</p>
-									<p>We believe a designer is not only an artist but also an engineer. And that success comes with the attention to details. We are always fully engaged in the project from beginning to end. We'll take you from an idea to its implementation.</p>
+				<?php  
+                    wp_reset_query();
+        
+                    $resent_list = new WP_Query(array('post_type'=> 'about-bureau', 'order'=> 'ASC', 'posts_per_page'=> -1));
+
+                    if ( $resent_list->have_posts() ) :
+                       	while ( $resent_list->have_posts() ) :
+                          		$resent_list->the_post(); ?>
+
+						<div class="list-item">
+							<div class="list-row">
+								<div class="list-content">
+									<div class="list-composition">
+										<h3 class="h3"><?php esc_html(the_title()); ?></h3>
+										<div class="list-text">
+											<p><?php esc_html(the_content()); ?></p>
+										</div>
+									</div>						
 								</div>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/about/studio.png)"></div>
-					</div>
-				</div>	
-				<!-- // -->
-				<div class="list-item">
-					<div class="list-row">
-						<div class="list-content">
-							<div class="list-composition">
-								<h3 class="h3">Main Areas of Work</h3>
-								<div class="list-text">
-									<p>We believe a designer is not only an artist but also an engineer. And that success comes with the attention to details. We are always fully engaged in the project from beginning to end. We'll take you from an idea to its implementation.</p>
-									<p>We believe a designer is not only an artist but also an engineer. And that success comes with the attention to details. We are always fully engaged in the project from beginning to end. We'll take you from an idea to its implementation.</p>
-								</div>
-							</div>						
-						</div>
-						<div class="list-image" style="background-image: url(<?php bloginfo('template_directory') ?>/img/about/main-work.png)"></div>
-					</div>
-				</div>
+								<div class="list-image" style="background: url(<?php esc_url(the_post_thumbnail_url()); ?>)no-repeat center/cover;"></div>
+							</div>
+						</div>	
+					<?php  endwhile; endif;  wp_reset_query(); ?>
+				 
 			</div>
 		</div>
 
@@ -124,16 +119,3 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
-
-<script>
-
-	$('.carousel-certificates-item').on('click', function(){
-		var img_url = $(this).attr('data-certificate');
-		$('#certificate_img img').attr('src', img_url);
-
-	})
-
-	$('.modal-content-certificate .button_close i').on('click', function(){
-		$("#modal-certificate").click();
-	})
-</script>

@@ -1,14 +1,14 @@
 <?php 
 
 /**
-* Template name: Internet Marketing (Portf) Template
+* Template name: Portfolio Design App Template
 */
 
 get_header(); ?>
 
-<main class="content mr-top">
-
-	<?php get_template_part( 'template-parts/portfolio-category-menu-inner_one', 'filter-menu-inner_one' ); ?>
+	<main class="content mr-top">
+		
+		<?php get_template_part( 'template-parts/portfolio-category-menu-inner-two', 'filter-menu-inner-two' ); ?>
 
 		<section id="portfolio" class="s-projects s-projects_portfolio clearfix">
 			<div class="container-fluid">
@@ -20,7 +20,7 @@ get_header(); ?>
             		        	array(
             		            	'taxonomy' => 'categories-portfolio',
             		           		'field'    => 'slug',
-            		            	'terms'   => array( 'internet-marketing' )
+            		            	'terms'   => array( 'app-work' )
             		        	)
             		    )
             		);
@@ -59,7 +59,7 @@ get_header(); ?>
 			</div>
 		</section>
 	</main>
-
-<?php get_template_part( 'template-parts/modal-filter-inner-one', 'modal-filter-inner-one' ); ?>
+	
+<?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
 
 <?php get_footer(); ?>
