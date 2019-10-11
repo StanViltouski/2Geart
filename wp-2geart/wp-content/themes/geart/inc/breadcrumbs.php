@@ -1,11 +1,11 @@
 <?php
 function get_breadcrumbs() {
-	$text['home']     = __('Home','aletheme');
-	$text['category'] = __('Archive','aletheme').' "%s"';
-	$text['search']   = __('Search results','aletheme').' "%s"';
-	$text['tag']      = __('Tag','aletheme').' "%s"';
-	$text['author']   = __('Author','aletheme').' %s';
-	$text['404']      = __('Error 404','aletheme');
+	$text['home']     = __('Home','geart');
+	$text['category'] = __('Archive','geart').' "%s"';
+	$text['search']   = __('Search results','geart').' "%s"';
+	$text['tag']      = __('Tag','geart').' "%s"';
+	$text['author']   = __('Author','geart').' %s';
+	$text['404']      = __('Error 404','geart');
 
 	$show_current   = 1;
 	$show_on_home   = 0;
@@ -23,6 +23,7 @@ function get_breadcrumbs() {
 	$link         = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
 	$parent_id    = $parent_id_2 = $post->post_parent;
 	$frontpage_id = get_option('page_on_front');
+	
 
 	if (is_home() || is_front_page()) {
 
@@ -31,7 +32,6 @@ function get_breadcrumbs() {
 	}
 	else {
 		echo '<nav class="breadcrumb"> <ul>';
-
 		if ($show_home_link == 1) {
 			echo sprintf($link, $home_link, $text['home']);
 			if ($frontpage_id == 0 || $parent_id != $frontpage_id) echo $delimiter;
@@ -173,6 +173,9 @@ function get_breadcrumbs() {
 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 		}
 
+
 		echo '</div><!-- .breadcrumbs -->';
+
+
 	}
 }

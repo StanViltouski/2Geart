@@ -14,6 +14,7 @@ get_header(); ?>
 					<div class="col-xl-7 order-xl-2 col-lg-6 order-lg-2">					
 						<img src="<?php esc_url(the_post_thumbnail_url()); ?>" alt="alt" class="about-us">
 					</div>
+
 					<div class="col-xl-5 col-lg-6">
 						<div class="s-header-content">
 							<?php if(get_post_meta($post->ID, $key = 'title_page', $single = true)){ ?>
@@ -25,7 +26,6 @@ get_header(); ?>
                     		<?php }  ?>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -33,9 +33,11 @@ get_header(); ?>
 		<section class="s-certificates s-accent">
 			<div class="container">
 				<div class="row">
+
 					<div class="col">
 						<h2 class="text-center">Diplomas & Certificates</h2>	
 					</div>
+
 				</div>
 			</div>
 			<div class="container ">
@@ -87,7 +89,9 @@ get_header(); ?>
 							<div class="list-row">
 								<div class="list-content">
 									<div class="list-composition">
+
 										<h3 class="h3"><?php esc_html(the_title()); ?></h3>
+
 										<div class="list-text">
 											<p><?php esc_html(the_content()); ?></p>
 										</div>
@@ -108,12 +112,14 @@ get_header(); ?>
 
 <div class="modal fade" id="modal-certificate" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
+
         <div class="modal-content modal-content-certificate">
         	<div class="button_close"><i class="fa fa-times" aria-hidden="true"></i></div>
         	<div id="certificate_img">
         		<img class="img-fluid" src="" alt="certificate">
         	</div>
         </div>
+        
     </div>
 </div>
 

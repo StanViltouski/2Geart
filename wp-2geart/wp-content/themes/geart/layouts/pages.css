@@ -190,7 +190,10 @@
 }
 
 
+/*Media*/
+
 @media only screen and (max-width: 1919px) {
+
   .page_title, .page_title-inner {
     padding-top: 60px;
     font-size: 58px;
@@ -202,6 +205,7 @@
 
 
 @media only screen and (max-width: 1439px) {
+
   .page_title, .page_title-inner {
     padding-top: 50px;
     font-size: 56px;

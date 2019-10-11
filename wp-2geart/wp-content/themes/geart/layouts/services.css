@@ -1,19 +1,13 @@
+.s-services .list-item:hover .list-content, .s-services .list-item:focus .list-content {background-color: #fff;}
 
-.s-services .list-item:hover .list-content, .s-services .list-item:focus .list-content {
-  background-color: #fff;
-}
-
-.s-services .list-item:hover .list-content h3, .s-services .list-item:hover .list-content .h3, .s-services .list-item:focus .list-content h3, .s-services .list-item:focus .list-content .h3 {
+.s-services .list-item:hover .list-content h3, .s-services .list-item:hover .list-content .h3,
+.s-services .list-item:focus .list-content h3, .s-services .list-item:focus .list-content .h3 {
   color: #febb16;
 }
 
-.s-services .list-content {
-  background-color: #f0f4f7;
-}
+.s-services .list-content {background-color: #f0f4f7;}
 
-.s-services .list-content .button {
-  margin-top: 40px;
-}
+.s-services .list-content .button {margin-top: 40px;}
 
 
 /*Post*/
@@ -151,7 +145,7 @@
 	height: 100%;
 }
 
-blockquote:before {content: url(../img/post/quote.svg);}
+blockquote:before {content: url(../img/quote.svg);}
 
 .wp-block-column blockquote p {
   padding-top: 20px;
@@ -167,6 +161,7 @@ blockquote:before {content: url(../img/post/quote.svg);}
 
 
 /*Styles for table*/
+
 .tablepress {
 	width: 100%!important;
 	min-width: 655px;
@@ -174,13 +169,11 @@ blockquote:before {content: url(../img/post/quote.svg);}
 
 .dataTables_wrapper {margin-bottom: 70px!important;}
 
-.tablepress thead th {
-	background-color: #fff!important;
-}
+.tablepress thead th {background-color: #fff!important;}
 
 .tablepress thead tr th {
 	font-size: 18px;
-    font-weight: bold;
+  font-weight: bold;
 	color: #232323;
 }
 
@@ -247,13 +240,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 }
 
 .container_services_post .textwidget p {margin-bottom: 0;}
-
-
-
-
-
-
-
 
 
 
@@ -353,11 +339,7 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	
 	.wp-block-media-text {margin-bottom: 35px;}
 
-	/*Gallery*/
-
 	.wp-block-gallery {padding: 45px 50px 105px 50px;}
-
-	/*Blockquote*/
 
 	.wp-block-quote p{
 	  margin-bottom: 50px;
@@ -402,13 +384,7 @@ blockquote:before {content: url(../img/post/quote.svg);}
 
 	.wp-block-media-text {margin-bottom: 25px;}
 
-
-	/*List*/
-
 	.container_services_post li {line-height: 1.63;}
-
-	
-	/*Gallery*/
 	
 	.wp-block-gallery {
 	  margin-bottom: 75px;
@@ -420,9 +396,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	  font-size: 20px;
 	  line-height: 1.6;
 	}
-
-
-	/*Block column with quote*/
 	
 	.wp-block-column blockquote {max-width: 300px;}
 	
@@ -430,8 +403,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	  font-size: 16px;
 	  line-height: 1.5;
 	}
-
-	/*Blockquote*/
 
 	.wp-block-quote p{
 	  margin: 0 auto 40px;
@@ -472,9 +443,7 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	  line-height: 1.33;
 	}
 	
-	.container_services_post h3 {
-	  font-size: 32px;
-	}
+	.container_services_post h3 {font-size: 32px;}
 	
 	.container_services_post h4, .s-order-wrap_app h4 {font-size: 24px;}
 	
@@ -488,16 +457,12 @@ blockquote:before {content: url(../img/post/quote.svg);}
 
 	.wp-block-media-text .wp-block-media-text__content{padding: 0;}
 
-	/*List*/
-
 	.wp-block-media-text__content ul {margin-bottom: 25px;}
 	
 	.container_services_post li {
 	  font-size: 16px;
 	  line-height: 1.63;
 	}
-
-	/*Gallery*/
 
 	.wp-block-gallery {
 		margin-bottom: 30px;
@@ -512,12 +477,8 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	.tablepress thead tr th {font-size: 14px;}
 
 	.tablepress tbody tr td {font-size: 14px;}
-
-	/*Block column with quote*/
 	
 	.wp-block-column blockquote {max-width: 250px;}
-
-	/*Blockquote*/
 
 	.wp-block-quote p {
 	  margin: 0 auto 40px;
@@ -591,8 +552,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 
 	.wp-block-media-text {margin-bottom: 15px;}
 
-	/*List*/
-
 	.wp-block-media-text__content ul {margin-bottom: 15px;}
 	
 	.container_services_post li {
@@ -600,8 +559,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	  font-size: 14px;
 	  line-height: 1.43;
 	}
-
-	/*Gallery*/
 
 	.wp-block-gallery {
 		display: block;
@@ -625,8 +582,6 @@ blockquote:before {content: url(../img/post/quote.svg);}
 	  font-size: 18px;
 	  line-height: 1.78;
 	}
-
-	/*Block column with quote*/
 	
 	.wp-block-column blockquote p {
 	  padding-top: 15px;

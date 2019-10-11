@@ -18,7 +18,7 @@
         ?>
 	</title>
 
-	<link rel="icon" href="<?php bloginfo('template_directory') ?>/img/favicon/favicon.ico">
+	<link rel="icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico">
 
 	<?php wp_head(); ?>
 
@@ -55,12 +55,13 @@
 
                 			]);
                 		?>
-
 					</nav>
+
 					<div class="button-wrap btn-mob">
 						<a href="/form" class="button btn-big">Send Request</a>	
 					</div>
 				</div>
+
 				<div class="button-wrap">
 					<a href="/form" class="button btn-big headerBtn-big-mobile">Send Request</a>
 					<a href="#" class="toggle-mnu"><span></span></a>

@@ -40,9 +40,7 @@ get_header(); ?>
 		</div>
 
 		<div id="services" class="s-services clearfix">
-
 			<div class="list-items" id="services-grid">
-
 
 				<?php 
 					wp_reset_query();
@@ -87,14 +85,18 @@ get_header(); ?>
 		</div>
 
 
+
 	<!-- Modal -->
+
 
 <div class="modal fade" id="modal-filter-portf" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+
             <div class="modal-header modal-header-portf">
                 <span class="modal-header-title">All Services</span><i class="fa fa-chevron-up" aria-hidden="true"></i>
             </div>
+
             <div class="modal-body">
                 <ul class="modal-filter-list">
                     <?php $wcatTerms = get_terms('services-page', 
@@ -116,7 +118,6 @@ get_header(); ?>
         </div>
     </div>
 </div>
-
 
 
 

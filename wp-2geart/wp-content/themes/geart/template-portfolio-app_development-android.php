@@ -59,6 +59,8 @@ get_header(); ?>
 		</section>
 	</main>
 
+
 <?php get_template_part( 'template-parts/modal-filter-inner-two', 'modal-filter-inner-two' ); ?>
+	
 	
 <?php get_footer(); ?>

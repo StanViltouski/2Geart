@@ -37,8 +37,6 @@ function geart_pingback_header() {
 add_action( 'wp_head', 'geart_pingback_header' );
 
 
-
-
 /*My scripts*/
 
 
@@ -48,3 +46,14 @@ function my_myme_types($mime_types){
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
+
+/*Remove item (admin panel)*/
+
+add_action('admin_menu', 'remove_admin_menu');
+
+function remove_admin_menu() {
+	remove_menu_page( 'index.php' ); //Dashboard
+	remove_menu_page( 'edit.php' );  //Posts
+	remove_menu_page('edit-comments.php'); // Comments
+}

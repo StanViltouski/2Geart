@@ -45,27 +45,33 @@ get_header(); ?>
 		</div>
 	</section>
 
+
+
 	<div class="s-adv">
 		<div class="container">
 			<div class="row justify-content-between">
+
 				<div class="col-auto">
 					<div class="s-adv-item">
 						<div class="count count_year"><span data-count="2015">0</span></div>
 						<p>Year of foundation</p>
 					</div>
 				</div>
+
 				<div class="col-auto">
 					<div class="s-adv-item">
 						<div class="count count_item"><span data-count="3">0</span></div>
 						<p>State Offices</p>
 					</div>
 				</div>
+
 				<div class="col-auto">
 					<div class="s-adv-item">
 						<div class="count count_projects"><span data-count="350">0</span></div>
 						<p>Number of projects</p>
 					</div>
 				</div>
+
 				<div class="col-auto">
 					<div class="s-adv-item">
 						<div class="count count_market"><span data-count="20">0</span></div>
@@ -76,10 +82,14 @@ get_header(); ?>
 		</div>
 	</div>
 
+
+
 	<section class="s-projects clearfix">
+
 		<h2 class="text-center">Recent Projects</h2>
+
 		<div class="container-fluid">
-				<div id="best_portfolio_grid">
+			<div id="best_portfolio_grid">
 
 				<?php 
 					wp_reset_query();
@@ -125,21 +135,22 @@ get_header(); ?>
 						</div>
 
 
-				<?php 
-    				endwhile; wp_reset_query();
-    			?>
+				<?php endwhile; wp_reset_query(); ?>
 
-				</div>
-				<div class="button-wrap button-wrap_main">
-					<a href="/portfolio">See All Projects &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-				</div>
+			</div>
+			<div class="button-wrap button-wrap_main">
+				<a href="/portfolio">See All Projects &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+			</div>
 
 		</div>
 	</section>
 
+
+
 	<section class="s-about">
 		<div class="container">
 			<div class="row">
+				
 				<div class="s-about_img col-lg-5 align-self-center"><img src="<?php if( get_field('abount_us_image') ): ?><?php esc_url(the_field('abount_us_image')); ?><?php endif; ?>" alt="About Us" class="img-fluid"></div>
 
 				<div class="col-lg-7">
@@ -154,6 +165,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+
 
 	<section class="s-customers">
 		<h2 class="text-center">Customers</h2>

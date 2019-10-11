@@ -19,15 +19,17 @@ get_header(); ?>
 				</div>
 				<div class="row">
 					<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-sm-12">
-						<form id="form_request" class="review" method="POST">
+
+						<form id="form_request" class="review" enctype="multipart/form-data" method="POST">
+							
 							<input type="hidden" name="project_name" value="2Geart">
-							<input type="hidden" name="admin_email" value="info@example.com">
+							<input type="hidden" name="admin_email" value="overnoise@tut.by">
 							<input type="hidden" name="project_subject" value="Send review form">
 
 							<input type="text" name="name" placeholder="Name" required>
 							<input type="email" name="email" placeholder="Email" required>
-							<input type="text" name="title" placeholder="Title" required>
-							<textarea name="message" placeholder="Description of your idea" required></textarea>
+							<input type="text" name="title" placeholder="Title">
+							<textarea name="message" placeholder="Description of your idea"></textarea>
 							
 							<div class="button-wrap">
 
@@ -42,6 +44,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</form>
+
 					</div>
 				</div>
 			</div>

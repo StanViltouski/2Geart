@@ -55,6 +55,7 @@ $next_post = $key + 1;
 
 
 <section class="single_portfolio_widgets">
+
 		<!--Widget -->
 
 		<div class="s-order-wrap s-order-wrap_app">
@@ -63,7 +64,9 @@ $next_post = $key + 1;
 					<div class="col-12 widget-wrapper-padding">
 						<div class="s-order service_widget widget_portfolio">
 							<div class="title">READY TO TALK?</div>
+
 							 <?php esc_html(dynamic_sidebar( 'Services Plate' )); ?>
+
 							<div class="button-wrap">
 								<a href="/form" class="button btn-white"><span>Send Request</span><i class="lnr lnr-arrow-right"></i></a>
 							</div>
@@ -75,7 +78,7 @@ $next_post = $key + 1;
 
 
 		<div class="change_post">
-				<div class="row">
+			<div class="row">
 					<?php 
 						wp_reset_query();
 	
@@ -112,7 +115,7 @@ $next_post = $key + 1;
 								</div>
 
 						<?php endwhile; }  wp_reset_query(); ?>
-				</div>	
+			</div>	
 		</div>
 </section>
 	

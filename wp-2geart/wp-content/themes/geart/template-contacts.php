@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-		<main class="content mr-top">
+	<main class="content mr-top">
 
 		<section class="s-callback s-white text-center" id="contact">
 			<div class="container">
@@ -35,6 +35,8 @@ get_header(); ?>
 				</div>
 			</div>
 		</section >
+
+
 		<div class="address">
 			<div class="address-items">
 
@@ -99,6 +101,4 @@ get_header(); ?>
 	</main>
 
 
-
 <?php get_footer(); ?>
-
