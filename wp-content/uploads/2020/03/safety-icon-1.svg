@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:3;stroke-linecap:round;}
+	.st1{fill:none;stroke:url(#SVGID_2_);stroke-width:3;stroke-linecap:round;}
+	.st2{fill:none;stroke:url(#SVGID_3_);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="60.0545" y1="40.0942" x2="67.8845" y2="34.4742" gradientTransform="matrix(1 0 0 -1 -18.85 89.82)">
+	<stop  offset="0" style="stop-color:#2EE5FF"/>
+	<stop  offset="1" style="stop-color:#44D83D"/>
+</linearGradient>
+<path class="st0" d="M41,48.7l8,7.5"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="79.8021" y1="46.0081" x2="68.2521" y2="33.2081" gradientTransform="matrix(1 0 0 -1 -18.85 89.82)">
+	<stop  offset="0" style="stop-color:#2EE5FF"/>
+	<stop  offset="1" style="stop-color:#44D83D"/>
+</linearGradient>
+<path class="st1" d="M49,56.3l14-14"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="39.1303" y1="60.6654" x2="103.8904" y2="23.3954" gradientTransform="matrix(1 0 0 -1 -18.85 89.82)">
+	<stop  offset="0" style="stop-color:#2EE5FF"/>
+	<stop  offset="1" style="stop-color:#44D83D"/>
+</linearGradient>
+<path class="st2" d="M48.5,16.3c-3.1,4.1-6.5,6.8-10.3,8.2c-3.9,1.4-8.5,1.4-13.7-0.1l0,0c-1.1-0.3-2.2,0.3-2.5,1.4l0,0
+	c0,0.1-0.1,0.3-0.1,0.4c-1.2,16.3,0,28.6,3.8,36.8c3.9,8.5,12,15.4,24.4,20.7l0,0c0.5,0.2,1,0.2,1.5,0C62.3,79.8,70.1,72.9,75,63
+	c4.7-9.7,6.1-22,4.2-37l0,0c-0.1-1.1-1.1-1.9-2.2-1.7l0,0h-0.3c-5.3,1.5-10.1,1.5-14.2,0.2c-4-1.3-7.6-4.1-10.7-8.2l0,0
+	c-0.7-0.9-1.9-1.1-2.8-0.4l0,0C48.8,16,48.6,16.1,48.5,16.3z"/>
+</svg>
